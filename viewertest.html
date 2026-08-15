@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Container, Quimbaya culture - 3D Viewer</title>
+  <link rel="stylesheet" href="stylestest.css" />
+</head>
+<body>
+
+  <!-- Scrollable Info Sidebar -->
+  <aside class="info-sidebar">
+    <a href="indextest.html" style="color: #d4af37; text-decoration: none; font-size: 14px; margin-bottom: 20px; display: inline-block;">← Back to Archive</a>
+    <h1>Container, Quimbaya culture</h1>
+    
+    <div class="meta-item">
+      By <a href="https://sketchfab.com/GlobalDigitalHeritage" target="_blank" rel="noopener">Global Digital Heritage and GDH-Afrika</a>
+    </div>
+
+    <div class="content-section">
+      <p>
+        The Quimbaya culture was a Pre-Columbian culture in Colombia, famed for their exquisite, precise gold and tumbaga technical metalwork. Artifacts associated with this culture are heavily characterized by poporo design and anthropomorphic representations.
+      </p>
+      <p>
+        Artifacts like this container showcase the sophisticated metallurgical skills developed in the pre-Hispanic Americas. The alloy used—often a mix of gold and copper known as <em>tumbaga</em>—allowed artisans to achieve delicate details and warm, lustrous surfaces through gilding techniques.
+      </p>
+      <p>
+        These containers often held lime used during ceremonial coca leaf chewing rituals, serving both functional and deeply symbolic cultural roles within ancient Colombian societies.
+      </p>
+      <p>
+        <strong>Interactive Viewer Controls:</strong><br />
+        • <strong>Rotate:</strong> Click + Drag with the primary mouse button.<br />
+        • <strong>Zoom:</strong> Scroll up or down with the mouse wheel.<br />
+        • <strong>Pan:</strong> Click + Drag with the secondary mouse button.
+      </p>
+    </div>
+  </aside>
+
+  <!-- Interactive 3D Model Area -->
+  <main class="viewer-container" id="viewer-container">
+    <canvas id="webgl-canvas"></canvas>
+    <button class="fullscreen-btn" id="fullscreen-btn">Toggle Fullscreen</button>
+  </main>
+
+  <!-- Load Three.js libraries from skypack (ESM CDN that works properly) -->
+  <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  
+  <!-- Load your script as module -->
+  <script type="module" src="scripttest.js"></script>
+</body>
+</html>
