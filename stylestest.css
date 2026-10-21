@@ -45,13 +45,118 @@ body {
 .viewer-container {
   position: relative;
   flex: 1;
+  min-width: 0;
   background-color: #000000;
 }
 
-#webgl-canvas {
+#artifact-viewer {
   width: 100%;
   height: 100%;
   display: block;
+  --poster-color: #000000;
+  --progress-bar-color: var(--accent);
+  --progress-bar-height: 3px;
+  --fullscreen-button: none;
+  --ar-button-display: block;
+}
+
+.model-hotspot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 0;
+  padding: 0;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.hotspot-number {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  place-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #17130a;
+  font-size: 0.9rem;
+  font-weight: 800;
+  box-shadow: 0 2px 10px #0009;
+}
+
+.hotspot-label {
+  display: none;
+  max-width: 15rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #ffffff40;
+  border-radius: 0.45rem;
+  background: #171717e8;
+  color: #f5f5f5;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  box-shadow: 0 3px 12px #0008;
+}
+
+.model-hotspot.is-expanded .hotspot-label {
+  display: inline-block;
+}
+
+.model-hotspot:focus-visible,
+.ar-button:focus-visible,
+.fullscreen-btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.ar-button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  background: #171717e8;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ar-button:hover {
+  background: var(--accent);
+  color: #111;
+}
+
+.model-loading {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.35rem;
+  background: #171717d9;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.model-loading[hidden] {
+  display: none;
+}
+
+.model-credit {
+  padding-top: 0.8rem;
+  border-top: 1px solid #3a3a3a;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.model-credit a {
+  color: var(--accent);
 }
 
 /* Controls UI Overlay */
