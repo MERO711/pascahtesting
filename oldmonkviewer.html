@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Old Monk - 3D Viewer</title>
+  <link rel="stylesheet" href="viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="index.html" class="back-link">← Back to Archive</a>
+    <h1>The Old Monk</h1>
+    <div class="meta-item">Stylized, rigged and animated digital model</div>
+
+    <div class="content-section">
+      <p>
+        Explore the Old Monk as an interactive 3D model. Drag to rotate the model and use the scroll wheel, pinch, or zoom gesture to change the view.
+      </p>
+      <p>
+        The available GLB file does not include cultural attribution or licensing details. This archive entry therefore presents it as a digital model without assigning a cultural origin.
+      </p>
+      <p><strong>Viewer controls:</strong><br />
+        <strong>Rotate:</strong> Drag with your mouse or finger.<br />
+        <strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.<br />
+        <strong>View in AR:</strong> Select “View in your space” on a supported mobile device.
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+    <model-viewer
+      id="artifact-viewer"
+      src="./placeholder_assets/container_quimbaya_culture/the_old_monk_stylized_-_rigged_and_animated.glb"
+      alt="Stylized three-dimensional model of the Old Monk"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      autoplay
+      loop
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="ar-button" slot="ar-button">View in your space</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="animation-btn" id="animation-btn" type="button" disabled aria-pressed="true">Loading animation…</button>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>

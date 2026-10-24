@@ -1,0 +1,261 @@
+:root {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --text-main: #e0e0e0;
+  --text-muted: #a0a0a0;
+  --accent: #d4af37;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-color);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.info-sidebar {
+  width: 35%;
+  min-width: 300px;
+  padding: 2rem;
+  overflow-y: auto;
+  border-right: 1px solid #2a2a2a;
+  background: var(--card-bg);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--accent);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.info-sidebar h1 {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-size: 1.8rem;
+}
+
+.meta-item {
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.meta-item a,
+.model-credit a {
+  color: var(--accent);
+}
+
+.content-section {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.content-section p {
+  margin-bottom: 1.2rem;
+}
+
+.model-credit {
+  padding-top: 0.8rem;
+  border-top: 1px solid #3a3a3a;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.viewer-container {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  background: #000;
+}
+
+#artifact-viewer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  --poster-color: #000;
+  --progress-bar-color: var(--accent);
+  --progress-bar-height: 3px;
+  --ar-button-display: block;
+}
+
+.model-hotspot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.hotspot-number {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  place-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #17130a;
+  font-size: 0.9rem;
+  font-weight: 800;
+  box-shadow: 0 2px 10px #0009;
+}
+
+.hotspot-label {
+  display: none;
+  max-width: 15rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #ffffff40;
+  border-radius: 0.45rem;
+  background: #171717e8;
+  color: #f5f5f5;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  box-shadow: 0 3px 12px #0008;
+}
+
+.model-hotspot.is-expanded .hotspot-label {
+  display: inline-block;
+}
+
+.model-hotspot:focus-visible,
+.ar-button:focus-visible,
+.fullscreen-btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.ar-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  background: #171717e8;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.ar-button:hover {
+  background: var(--accent);
+  color: #111;
+}
+
+.model-loading {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.35rem;
+  background: #171717d9;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.model-loading[hidden] {
+  display: none;
+}
+
+.fullscreen-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px 16px;
+  background: #1e1e1ed9;
+  color: var(--text-main);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.animation-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 10px 16px;
+  background: #1e1e1ed9;
+  color: var(--text-main);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.animation-btn:hover:not(:disabled) {
+  background: var(--accent);
+  color: #000;
+}
+
+.animation-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.animation-btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.fullscreen-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column-reverse;
+  }
+
+  .info-sidebar {
+    width: 100%;
+    min-width: 0;
+    height: 50vh;
+    padding: 1.25rem;
+  }
+
+  .viewer-container {
+    height: 50vh;
+    flex: 0 0 50vh;
+  }
+}
+
+@media (max-width: 420px) {
+  .info-sidebar {
+    height: 45vh;
+  }
+
+  .viewer-container {
+    height: 55vh;
+    flex-basis: 55vh;
+  }
+}

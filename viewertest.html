@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Container, Quimbaya culture - 3D Viewer</title>
-  <link rel="stylesheet" href="stylestest.css" />
+  <link rel="stylesheet" href="viewer.css" />
 </head>
 <body>
 
   <!-- Scrollable Info Sidebar -->
   <aside class="info-sidebar">
-    <a href="indextest.html" style="color: #d4af37; text-decoration: none; font-size: 14px; margin-bottom: 20px; display: inline-block;">← Back to Archive</a>
+    <a href="index.html" class="back-link">← Back to Archive</a>
     <h1>Container, Quimbaya culture</h1>
     
     <div class="meta-item">
@@ -32,6 +32,8 @@
         • <strong>Rotate:</strong> Drag with your mouse or finger.<br />
         • <strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.<br />
         • <strong>Explore:</strong> Select the numbered points on the artifact.<br />
+
+        <!-- Add a QR Code for this section -->
         • <strong>View in AR:</strong> Select “View in your space” on a supported mobile device.
       </p>
       <p class="model-credit">
@@ -75,6 +77,6 @@
 
   <!-- Google's model-viewer supports browser-based 3D and device AR modes. -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
-  <script type="module" src="scripttest.js"></script>
+  <script type="module" src="viewer.js"></script>
 </body>
 </html>

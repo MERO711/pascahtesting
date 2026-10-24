@@ -3,62 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cultural Heritage Archive - 3D Museum</title>
-  <link rel="stylesheet" href="stylestest.css" />
+  <title>Cultural Heritage Archive - Values &amp; Artifacts</title>
+  <link rel="stylesheet" href="archive.css" />
 </head>
-<body>
-
-  <div class="container">
-    <!-- Header -->
-    <header>
+<body class="archive-page">
+  <main class="container">
+    <header class="archive-header">
+      <p class="eyebrow">PASCAH · DIGITAL MUSEUM</p>
       <h1>Cultural Heritage Archive</h1>
-      <p>Interactive 3D Museum of Pre-Columbian Artifacts</p>
+      <p>Explore the stories, values, and objects that connect us to the past.</p>
     </header>
 
-    <!-- Archive Grid -->
-    <div class="archive-grid">
-      <!-- Quimbaya Container -->
-      <div class="archive-item">
-        <div class="archive-item-header">
-          <h2>Container, Quimbaya culture</h2>
-          <div class="archive-item-culture">Quimbaya Culture • Colombia</div>
-        </div>
-        <div class="archive-item-content">
-          <p class="archive-item-description">
-            An exquisite Pre-Columbian artifact showcasing the sophisticated metallurgical skills of the Quimbaya culture. This ceremonial container features intricate gold and tumbaga metalwork with precise geometric patterns.
-          </p>
-          <div class="archive-item-meta">
-            <span><strong>Culture:</strong> Quimbaya</span>
-            <span><strong>Period:</strong> Pre-Columbian</span>
-            <span><strong>Region:</strong> Colombia</span>
-          </div>
-          <a href="viewertest.html" class="view-button">View in 3D →</a>
+    <section class="archive-section" aria-labelledby="archive-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OUR COLLECTION</p>
+          <h2 id="archive-title">Values &amp; Artifacts</h2>
+          <p class="section-intro">We share cultural objects with care, context, and respect for the communities and histories they represent.</p>
         </div>
       </div>
 
-      <!-- Placeholder for Future Items -->
-      <div class="archive-item archive-item-placeholder">
-        <div class="archive-item-header">
-          <h2>Coming Soon...</h2>
-          <div class="archive-item-culture">More artifacts to explore</div>
-        </div>
-        <div class="archive-item-content">
-          <p class="archive-item-description">
-            We're continuously adding new cultural artifacts to our collection. Check back soon for more fascinating Pre-Columbian and indigenous American treasures.
-          </p>
-          <div class="archive-item-meta">
-            <span>📦 New items in development</span>
+      <div class="archive-tabs" role="tablist" aria-label="Archive categories">
+        <button class="archive-tab" id="values-tab" type="button" role="tab" aria-controls="values-panel" aria-selected="true">Values</button>
+        <button class="archive-tab" id="artifacts-tab" type="button" role="tab" aria-controls="artifacts-panel" aria-selected="false" tabindex="-1">Artifacts</button>
+      </div>
+
+      <section class="archive-panel" id="values-panel" role="tabpanel" aria-labelledby="values-tab">
+        <div class="alphabet-bar" role="group" aria-label="Filter values alphabetically"></div>
+        <div class="archive-panel-heading">
+          <h3>Values <span class="item-count"></span></h3>
+          <div class="archive-scroll-controls" aria-label="Values scrolling controls">
+            <button type="button" data-scroll="up" aria-label="Scroll values up">↑</button>
+            <button type="button" data-scroll="down" aria-label="Scroll values down">↓</button>
           </div>
         </div>
-      </div>
-    </div>
+        <div class="archive-items" tabindex="0" aria-label="Values in alphabetical order">
+          <article class="archive-item">
+            <div class="archive-item-header"><h4>Preservation</h4></div>
+            <div class="archive-item-content"><p class="archive-item-description">Keep cultural knowledge and digital records accessible for future generations.</p></div>
+          </article>
+          <article class="archive-item">
+            <div class="archive-item-header"><h4>Respectful access</h4></div>
+            <div class="archive-item-content"><p class="archive-item-description">Provide context and clear attribution while encouraging thoughtful exploration.</p></div>
+          </article>
+          <article class="archive-item">
+            <div class="archive-item-header"><h4>Shared learning</h4></div>
+            <div class="archive-item-content"><p class="archive-item-description">Make it easier to discover the histories behind objects and digital models.</p></div>
+          </article>
+          <a class="archive-item archive-item-link" href="oldmonkviewer.html">
+            <div class="archive-item-header">
+              <h4>The Old Monk</h4>
+              <p>Stylized, rigged 3D model</p>
+            </div>
+            <div class="archive-item-content">
+              <p class="archive-item-description">Explore the stylized Old Monk model in an interactive 3D viewer. It is presented as a digital artwork; cultural attribution is not provided with the available file.</p>
+              <div class="archive-item-meta">
+                <span><strong>Collection:</strong> Digital models</span>
+                <span><strong>Format:</strong> GLB</span>
+              </div>
+              <span class="view-button">View in 3D <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
 
-    <!-- Footer -->
+      <section class="archive-panel" id="artifacts-panel" role="tabpanel" aria-labelledby="artifacts-tab" hidden>
+        <div class="alphabet-bar" role="group" aria-label="Filter artifacts alphabetically"></div>
+        <div class="archive-panel-heading">
+          <h3>Artifacts <span class="item-count"></span></h3>
+          <div class="archive-scroll-controls" aria-label="Artifacts scrolling controls">
+            <button type="button" data-scroll="up" aria-label="Scroll artifacts up">↑</button>
+            <button type="button" data-scroll="down" aria-label="Scroll artifacts down">↓</button>
+          </div>
+        </div>
+        <div class="archive-items" tabindex="0" aria-label="Artifacts in alphabetical order">
+          <a class="archive-item archive-item-link" href="viewertest.html">
+            <div class="archive-item-header">
+              <h4>Container, Quimbaya culture</h4>
+              <p>Quimbaya Culture · Colombia</p>
+            </div>
+            <div class="archive-item-content">
+              <p class="archive-item-description">An exquisite Pre-Columbian artifact showcasing the sophisticated metallurgical skills of the Quimbaya culture. This ceremonial container features intricate gold and tumbaga metalwork with precise geometric patterns.</p>
+              <div class="archive-item-meta">
+                <span><strong>Culture:</strong> Quimbaya</span>
+                <span><strong>Period:</strong> Pre-Columbian</span>
+                <span><strong>Region:</strong> Colombia</span>
+              </div>
+              <span class="view-button">View in 3D <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </section>
+
     <footer>
-      <p>
-        PASCAH
+      <p>PASCAH · Cultural Heritage Archive</p>
     </footer>
-  </div>
-
+  </main>
+  <script src="archive.js" defer></script>
 </body>
 </html>
