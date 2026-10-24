@@ -2,6 +2,17 @@ const viewer = document.getElementById('artifact-viewer');
 const fullscreenBtn = document.getElementById('fullscreen-btn');
 const loadingMessage = viewer.querySelector('.model-loading');
 const animationBtn = document.getElementById('animation-btn');
+const arButton = viewer.querySelector('.ar-button');
+
+arButton?.addEventListener('click', () => {
+  if (viewer.availableAnimations.length > 0) {
+    viewer.play();
+    if (animationBtn) {
+      animationBtn.setAttribute('aria-pressed', 'true');
+      animationBtn.textContent = 'Pause animation';
+    }
+  }
+});
 
 viewer.querySelectorAll('.model-hotspot').forEach((hotspot) => {
   hotspot.setAttribute('aria-expanded', 'false');
