@@ -28,7 +28,7 @@ viewer.querySelectorAll('.model-hotspot').forEach((hotspot) => {
   });
 });
 
-viewer.addEventListener('load', () => {
+function handleViewerLoad() {
   loadingMessage.hidden = true;
   if (animationBtn) {
     const hasAnimation = viewer.availableAnimations.length > 0;
@@ -36,7 +36,12 @@ viewer.addEventListener('load', () => {
     animationBtn.textContent = hasAnimation ? 'Pause animation' : 'No animation available';
     animationBtn.setAttribute('aria-pressed', String(hasAnimation));
   }
-});
+}
+
+viewer.addEventListener('load', handleViewerLoad);
+if (viewer.loaded) {
+  handleViewerLoad();
+}
 
 viewer.addEventListener('error', () => {
   loadingMessage.textContent = 'The 3D artifact could not be loaded.';

@@ -132,25 +132,6 @@ body {
   width: 33.05%;
 }
 
-.region-label {
-  position: absolute;
-  top: 47%;
-  left: 50%;
-  z-index: 3;
-  transform: translate(-50%, -50%);
-  border: 1px solid #f0d98599;
-  border-radius: 8px;
-  padding: 7px 10px;
-  background: #171717df;
-  color: #f0d985;
-  font-size: clamp(0.7rem, 1.5vw, 1rem);
-  font-weight: 800;
-  line-height: 1.05;
-  text-align: center;
-  text-shadow: 0 2px 8px #000, 0 0 3px #000;
-  pointer-events: none;
-}
-
 .map-hint {
   margin: 18px 0 14px;
   color: var(--text-muted);

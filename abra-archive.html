@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the cultural heritage archive for Abra." />
+  <title>Abra Archive | PASCAH</title>
+  <link rel="stylesheet" href="archive.css" />
+</head>
+<body class="archive-page">
+  <main class="container">
+    <header class="archive-header">
+      <p class="eyebrow">PASCAH · DIGITAL MUSEUM</p>
+      <h1>Abra Archive</h1>
+      <p>Explore the stories, values, and objects of Abra.</p>
+    </header>
+    <nav class="archive-navigation" aria-label="Archive navigation">
+      <a href="index.html">← Back to the Cordilleran map</a>
+    </nav>
+    <section class="archive-section" aria-labelledby="archive-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PROVINCE COLLECTION</p>
+          <h2 id="archive-title">Values &amp; Artifacts</h2>
+          <p class="section-intro">Explore cultural objects with care, context, and respect for the communities and histories they represent.</p>
+        </div>
+      </div>
+      <div class="archive-tabs" role="tablist" aria-label="Archive categories">
+        <button class="archive-tab" id="artifacts-tab" type="button" role="tab" aria-controls="artifacts-panel" aria-selected="true">Artifacts</button>
+        <button class="archive-tab" id="values-tab" type="button" role="tab" aria-controls="values-panel" aria-selected="false" tabindex="-1">Values</button>
+      </div>
+      <section class="archive-panel" id="artifacts-panel" role="tabpanel" aria-labelledby="artifacts-tab">
+        <div class="alphabet-bar" role="group" aria-label="Filter artifacts alphabetically"></div>
+        <div class="archive-panel-heading">
+          <h3>Artifacts <span class="item-count"></span></h3>
+          <div class="archive-scroll-controls" aria-label="Artifacts scrolling controls">
+            <button type="button" data-scroll="up" aria-label="Scroll artifacts up">↑</button>
+            <button type="button" data-scroll="down" aria-label="Scroll artifacts down">↓</button>
+          </div>
+        </div>
+        <div class="archive-items" tabindex="0" aria-label="Artifacts in alphabetical order">
+          <a class="archive-item archive-item-link" href="viewertest.html">
+            <div class="archive-item-header"><h4>Container, Quimbaya culture</h4><p>Quimbaya Culture · Colombia</p></div>
+            <div class="archive-item-content">
+              <p class="archive-item-description">An exquisite Pre-Columbian artifact showcasing the sophisticated metallurgical skills of the Quimbaya culture. This ceremonial container features intricate gold and tumbaga metalwork with precise geometric patterns.</p>
+              <div class="archive-item-meta"><span><strong>Culture:</strong> Quimbaya</span><span><strong>Period:</strong> Pre-Columbian</span><span><strong>Region:</strong> Colombia</span></div>
+              <span class="view-button">View in 3D <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+          <a class="archive-item archive-item-link" href="abra-artifact.html">
+            <div class="archive-item-header"><h4>Abra 3D Model</h4><p>Province model</p></div>
+            <div class="archive-item-content">
+              <p class="archive-item-description">3D model supplied for the Abra collection. Add verified cultural context and attribution before publication.</p>
+              <div class="archive-item-meta"><span><strong>Province:</strong> Abra</span><span><strong>Format:</strong> GLB</span></div>
+              <span class="view-button">View in 3D <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="archive-panel" id="values-panel" role="tabpanel" aria-labelledby="values-tab" hidden>
+        <div class="alphabet-bar" role="group" aria-label="Filter values alphabetically"></div>
+        <div class="archive-panel-heading">
+          <h3>Values <span class="item-count"></span></h3>
+          <div class="archive-scroll-controls" aria-label="Values scrolling controls">
+            <button type="button" data-scroll="up" aria-label="Scroll values up">↑</button>
+            <button type="button" data-scroll="down" aria-label="Scroll values down">↓</button>
+          </div>
+        </div>
+        <div class="archive-items" tabindex="0" aria-label="Values in alphabetical order">
+          <a class="archive-item archive-item-link" href="oldmonkviewer.html">
+            <div class="archive-item-header"><h4>The Old Monk</h4><p>Temporary demo · Stylized, rigged 3D model</p></div>
+            <div class="archive-item-content">
+              <p class="archive-item-description">Explore the Old Monk as an interactive digital model. Cultural attribution is not provided with the available file, so it is not presented as an Abra cultural object.</p>
+              <div class="archive-item-meta"><span><strong>Collection:</strong> Digital models</span><span><strong>Format:</strong> GLB</span></div>
+              <span class="view-button">View in 3D and AR <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </section>
+    <footer><p>PASCAH · Cultural Heritage Archive</p></footer>
+  </main>
+  <script src="archive.js" defer></script>
+</body>
+</html>

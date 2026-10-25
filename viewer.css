@@ -92,6 +92,10 @@ body {
   --ar-button-display: block;
 }
 
+#artifact-viewer[hidden] {
+  display: none;
+}
+
 .model-hotspot {
   position: relative;
   display: flex;

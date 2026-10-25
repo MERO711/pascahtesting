@@ -229,6 +229,7 @@ body.archive-page {
 }
 
 .archive-empty {
+  grid-column: 1 / -1;
   padding: 28px 20px;
   border: 1px dashed #ffffff35;
   border-radius: 8px;
