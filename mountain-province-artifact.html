@@ -12,17 +12,42 @@
     <h1>Mountain Province 3D Model</h1>
     <div class="meta-item">Province model · GLB</div>
     <div class="content-section">
-      <p>Explore this 3D model provided for the Mountain Province collection. Drag to rotate the model and use the scroll wheel, pinch, or zoom gesture to change the view.</p>
-      <p>Add verified information about the model, its cultural context, creator, and license before publication.</p>
+      <!-- Edit these paragraphs to add verified model details, context, and attribution. -->
+      <p>
+        Explore this 3D model provided for the Mountain Province collection. Drag
+        to rotate the model and use the scroll wheel, pinch, or zoom gesture to
+        change the view.
+      </p>
+      <p>
+        Add verified information about the model, its cultural context, creator,
+        and license before publication.
+      </p>
     </div>
   </aside>
+
   <main class="viewer-container" id="viewer-container">
-    <model-viewer id="artifact-viewer" src="3D%20ASSETS/mt.province.glb" alt="Three-dimensional model in the Mountain Province collection" camera-controls touch-action="pan-y" auto-rotate ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" shadow-intensity="1" exposure="1" interaction-prompt="auto" loading="eager">
+    <!-- Update src and alt when replacing the GLB; keep ar and ar-modes for AR support. -->
+    <model-viewer
+      id="artifact-viewer"
+      src="3D%20ASSETS/mt.province.glb"
+      alt="Three-dimensional model in the Mountain Province collection"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
       <button class="ar-button" slot="ar-button">View in your space</button>
       <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
     </model-viewer>
     <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
   </main>
+
+  <!-- model-viewer provides the 3D/AR component; viewer.js handles loading and fullscreen behavior. -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
   <script type="module" src="viewer.js"></script>
 </body>
