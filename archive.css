@@ -55,6 +55,24 @@ body.archive-page {
   font-style: italic;
 }
 
+.archive-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+  margin: -18px 0 28px;
+}
+
+.archive-navigation a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.archive-navigation a:hover,
+.archive-navigation a:focus-visible {
+  text-decoration: underline;
+}
+
 .archive-section {
   padding: 28px;
   border: 1px solid #ffffff1c;
@@ -208,6 +226,15 @@ body.archive-page {
 
 .archive-item[hidden] {
   display: none;
+}
+
+.archive-empty {
+  padding: 28px 20px;
+  border: 1px dashed #ffffff35;
+  border-radius: 8px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: center;
 }
 
 .archive-item {

@@ -3,91 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cultural Heritage Archive - Values &amp; Artifacts</title>
-  <link rel="stylesheet" href="archive.css" />
+  <meta name="description" content="Explore the six Cordilleran provinces and their cultural heritage archives." />
+  <title>Explore the Cordilleran Region | PASCAH</title>
+  <link rel="stylesheet" href="map.css" />
 </head>
-<body class="archive-page">
-  <main class="container">
-    <header class="archive-header">
+<body>
+  <main class="map-page">
+    <header class="map-header">
       <p class="eyebrow">PASCAH · DIGITAL MUSEUM</p>
-      <h1>Cultural Heritage Archive</h1>
-      <p>Explore the stories, values, and objects that connect us to the past.</p>
+      <h1>Cordilleran Region</h1>
+      <p>Select a province to explore its archive.</p>
     </header>
 
-    <section class="archive-section" aria-labelledby="archive-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">OUR COLLECTION</p>
-          <h2 id="archive-title">Values &amp; Artifacts</h2>
-          <p class="section-intro">We share cultural objects with care, context, and respect for the communities and histories they represent.</p>
-        </div>
+    <section class="map-section" aria-labelledby="province-map-title">
+      <h2 id="province-map-title" class="visually-hidden">Interactive map of the Cordilleran provinces</h2>
+      <div class="map-frame">
+        <a class="province-link province-abra" href="province.html?province=abra" aria-label="Open the Abra archive">
+          <img src="Cordi%20Map/abra-text.png" alt="Abra" />
+        </a>
+        <a class="province-link province-apayao" href="province.html?province=apayao" aria-label="Open the Apayao archive">
+          <img src="Cordi%20Map/apayao-text.png" alt="Apayao" />
+        </a>
+        <a class="province-link province-benguet" href="province.html?province=benguet" aria-label="Open the Benguet archive">
+          <img src="Cordi%20Map/benguet-text.png" alt="Benguet" />
+        </a>
+        <a class="province-link province-ifugao" href="province.html?province=ifugao" aria-label="Open the Ifugao archive">
+          <img src="Cordi%20Map/ifugao-text.png" alt="Ifugao" />
+        </a>
+        <a class="province-link province-kalinga" href="province.html?province=kalinga" aria-label="Open the Kalinga archive">
+          <img src="Cordi%20Map/kalinga-text.png" alt="Kalinga" />
+        </a>
+        <a class="province-link province-mountain-province" href="province.html?province=mountain-province" aria-label="Open the Mountain Province archive">
+          <img src="Cordi%20Map/mountain-province-text.png" alt="Mountain Province" />
+        </a>
+        <p class="region-label" aria-hidden="true">Cordilleran<br />Region</p>
       </div>
-
-      <div class="archive-tabs" role="tablist" aria-label="Archive categories">
-        <button class="archive-tab" id="values-tab" type="button" role="tab" aria-controls="values-panel" aria-selected="true">Values</button>
-        <button class="archive-tab" id="artifacts-tab" type="button" role="tab" aria-controls="artifacts-panel" aria-selected="false" tabindex="-1">Artifacts</button>
-      </div>
-
-      <section class="archive-panel" id="values-panel" role="tabpanel" aria-labelledby="values-tab">
-        <div class="alphabet-bar" role="group" aria-label="Filter values alphabetically"></div>
-        <div class="archive-panel-heading">
-          <h3>Values <span class="item-count"></span></h3>
-          <div class="archive-scroll-controls" aria-label="Values scrolling controls">
-            <button type="button" data-scroll="up" aria-label="Scroll values up">↑</button>
-            <button type="button" data-scroll="down" aria-label="Scroll values down">↓</button>
-          </div>
-        </div>
-        <div class="archive-items" tabindex="0" aria-label="Values in alphabetical order">
-          <a class="archive-item archive-item-link" href="oldmonkviewer.html">
-            <div class="archive-item-header">
-              <h4>The Old Monk</h4>
-              <p>Stylized, rigged 3D model</p>
-            </div>
-            <div class="archive-item-content">
-              <p class="archive-item-description">Explore the stylized Old Monk model in an interactive 3D viewer. It is presented as a digital artwork; cultural attribution is not provided with the available file.</p>
-              <div class="archive-item-meta">
-                <span><strong>Collection:</strong> Digital models</span>
-                <span><strong>Format:</strong> GLB</span>
-              </div>
-              <span class="view-button">View in 3D <span aria-hidden="true">→</span></span>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <section class="archive-panel" id="artifacts-panel" role="tabpanel" aria-labelledby="artifacts-tab" hidden>
-        <div class="alphabet-bar" role="group" aria-label="Filter artifacts alphabetically"></div>
-        <div class="archive-panel-heading">
-          <h3>Artifacts <span class="item-count"></span></h3>
-          <div class="archive-scroll-controls" aria-label="Artifacts scrolling controls">
-            <button type="button" data-scroll="up" aria-label="Scroll artifacts up">↑</button>
-            <button type="button" data-scroll="down" aria-label="Scroll artifacts down">↓</button>
-          </div>
-        </div>
-        <div class="archive-items" tabindex="0" aria-label="Artifacts in alphabetical order">
-          <a class="archive-item archive-item-link" href="viewertest.html">
-            <div class="archive-item-header">
-              <h4>Container, Quimbaya culture</h4>
-              <p>Quimbaya Culture · Colombia</p>
-            </div>
-            <div class="archive-item-content">
-              <p class="archive-item-description">An exquisite Pre-Columbian artifact showcasing the sophisticated metallurgical skills of the Quimbaya culture. This ceremonial container features intricate gold and tumbaga metalwork with precise geometric patterns.</p>
-              <div class="archive-item-meta">
-                <span><strong>Culture:</strong> Quimbaya</span>
-                <span><strong>Period:</strong> Pre-Columbian</span>
-                <span><strong>Region:</strong> Colombia</span>
-              </div>
-              <span class="view-button">View in 3D <span aria-hidden="true">→</span></span>
-            </div>
-          </a>
-        </div>
-      </section>
+      <p class="map-hint">Hover over a province to highlight it, or select it to open its archive.</p>
+      <nav class="province-list" aria-label="Province archives">
+        <a href="province.html?province=abra">Abra</a>
+        <a href="province.html?province=apayao">Apayao</a>
+        <a href="province.html?province=benguet">Benguet</a>
+        <a href="province.html?province=ifugao">Ifugao</a>
+        <a href="province.html?province=kalinga">Kalinga</a>
+        <a href="province.html?province=mountain-province">Mountain Province</a>
+      </nav>
     </section>
-
-    <footer>
-      <p>PASCAH · Cultural Heritage Archive</p>
-    </footer>
+    <footer>PASCAH · Cultural Heritage Archive</footer>
   </main>
-  <script src="archive.js" defer></script>
 </body>
 </html>
