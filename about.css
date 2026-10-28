@@ -89,7 +89,7 @@ body {
 /* TEAM GRID: Controls the overall three-card layout and spacing. */
 .team-grid {
   width: min(1328px, 100%);
-  min-height: 560px;
+  min-height: 520px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
