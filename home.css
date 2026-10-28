@@ -43,8 +43,8 @@ body {
   border: 2px solid var(--accent);
   border-radius: 50%;
   background: #1e1e1e;
+  object-fit: cover;
 }
-.brand-mark span { color: var(--accent); font-size: 20px; font-weight: 800; }
 .brand-name { font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav a {
@@ -129,21 +129,6 @@ body {
   object-fit: contain;
   filter: drop-shadow(9px 14px 14px #0008);
 }
-.map-play {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: var(--accent);
-  color: #111;
-  text-decoration: none;
-}
-.map-play span { margin-left: 3px; }
 
 @media (max-width: 900px) {
   .hero-content { grid-template-columns: 1fr 1fr; padding: 24px; }

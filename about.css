@@ -43,8 +43,8 @@ body {
   border: 2px solid var(--accent);
   border-radius: 50%;
   background: #1e1e1e;
+  object-fit: cover;
 }
-.brand-mark span { color: var(--accent); font-size: 20px; font-weight: 800; }
 .brand-name { font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav a {
