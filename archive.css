@@ -1,6 +1,74 @@
 :root {
   color-scheme: dark;
   --bg-color: #121212;
+  --text-main: #e0e0e0;
+  --text-muted: #a0a0a0;
+  --accent: #d4af37;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { min-width: 320px; }
+body {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 28%, #333 0, #1a1a1a 58%, #121212 100%);
+  color: var(--text-main);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.site-header {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid #d4af3740;
+  background: #121212;
+}
+
+.brand { display: flex; align-items: center; gap: 10px; color: var(--accent); text-decoration: none; }
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: #1e1e1e;
+}
+.brand-mark span { color: var(--accent); font-size: 20px; font-weight: 800; }
+.brand-name { font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
+.main-nav { display: flex; align-items: center; gap: 28px; }
+.main-nav a {
+  color: var(--text-main);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.main-nav a span { margin-right: 4px; color: var(--accent); }
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.main-nav a.active { color: var(--accent); }
+.main-nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+@media (max-width: 900px) {
+  .site-header { padding: 0 20px; }
+  .main-nav { gap: 14px; }
+}
+
+@media (max-width: 680px) {
+  .site-header { height: auto; min-height: 58px; padding: 8px 14px; }
+  .brand-name { display: none; }
+  .brand-mark { width: 40px; height: 40px; }
+  .main-nav { gap: 10px; }
+  .main-nav a { font-size: 0.72rem; }
+}
+
+:root {
+  color-scheme: dark;
+  --bg-color: #121212;
   --card-bg: #1e1e1e;
   --text-main: #e0e0e0;
   --text-muted: #a0a0a0;
