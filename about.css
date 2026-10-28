@@ -1,3 +1,9 @@
+/*
+ * ABOUT US PAGE STYLES: about.html
+ * This file controls the About Us heading, team grid, cards, member roles,
+ * portrait placeholder size, names, and mobile stacking behavior.
+ */
+
 :root {
   color-scheme: dark;
   --bg-color: #121212;
@@ -15,6 +21,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* NAVIGATION: Editing these rules changes the top bar and logo on the About Us page. */
 .site-header {
   height: 58px;
   display: flex;
@@ -58,6 +65,7 @@ body {
   .main-nav { gap: 14px; }
 }
 
+/* MOBILE TEAM LAYOUT: Stacks the cards vertically on small screens. */
 @media (max-width: 680px) {
   .site-header { height: auto; min-height: 58px; padding: 8px 14px; }
   .brand-name { display: none; }
@@ -66,6 +74,7 @@ body {
   .main-nav a { font-size: 0.72rem; }
 }
 
+/* ABOUT PAGE BACKGROUND: Changes the page background behind the team cards. */
 .about-page {
   min-height: 100vh;
   background: radial-gradient(ellipse at 50% 35%, #333 0, #1a1a1a 58%, #121212 100%);
@@ -77,15 +86,17 @@ body {
   text-align: center;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
+/* TEAM GRID: Controls the overall three-card layout and spacing. */
 .team-grid {
   width: min(1328px, 100%);
-  min-height: 390px;
+  min-height: 560px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
   gap: 12px;
 }
+/* TEAM CARD: Changes the size, border, background, and inner spacing of every team card. */
 .team-card {
   min-width: 0;
   display: flex;
@@ -97,7 +108,9 @@ body {
   background: #1e1e1e;
   text-align: center;
 }
+/* FEATURED CARD: Changes only the highlighted center card. */
 .team-card-featured { border-color: #d4af3770; background: #252525; }
+/* ROLE RATING: Controls the stars and role labels above member names. */
 .team-role {
   height: 42px;
   display: flex;
@@ -107,7 +120,9 @@ body {
   line-height: 1;
 }
 .team-card h2 { margin: 12px 0 38px; color: var(--text-main); font-size: 1.55rem; }
+/* PORTRAIT PLACEHOLDER: Changing width, height, or border-radius resizes the blank image circles. */
 .member-image { width: 150px; height: 150px; border-radius: 50%; }
+/* MEMBER NAME: Changes the styling of the person names below the portraits. */
 .member-name { margin: 32px 0 0; color: var(--text-main); font-size: 1.25rem; font-weight: 700; }
 
 @media (max-width: 680px) {

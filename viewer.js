@@ -1,3 +1,9 @@
+/*
+ * 3D ARTIFACT VIEWER LOGIC: viewer.js
+ * Used by artifact pages that contain a <model-viewer>. Controls loading,
+ * hotspots, animation playback, AR playback, and fullscreen mode.
+ * Selector or element-ID changes here require matching updates in the HTML.
+ */
 const viewer = document.getElementById('artifact-viewer');
 const fullscreenBtn = document.getElementById('fullscreen-btn');
 const loadingMessage = viewer.querySelector('.model-loading');

@@ -1,3 +1,9 @@
+/*
+ * HOME PAGE STYLES: index.html
+ * Changes to colors, fonts, nav bars, hero text, and layout affect this page.
+ * The :root values define the black-and-gold palette used by the website.
+ */
+
 :root {
   color-scheme: dark;
   --bg-color: #121212;
@@ -15,6 +21,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* NAVIGATION: Editing these rules changes the top bar and logo on the home page. */
 .site-header {
   height: 58px;
   display: flex;
@@ -53,11 +60,13 @@ body {
 .main-nav a.active { color: var(--accent); }
 .main-nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
+/* TABLET LAYOUT: Adjusts the home page for medium screens. */
 @media (max-width: 900px) {
   .site-header { padding: 0 20px; }
   .main-nav { gap: 14px; }
 }
 
+/* MOBILE LAYOUT: Adjusts the home page for phones. */
 @media (max-width: 680px) {
   .site-header { height: auto; min-height: 58px; padding: 8px 14px; }
   .brand-name { display: none; }
@@ -66,12 +75,14 @@ body {
   .main-nav a { font-size: 0.72rem; }
 }
 
+/* HOME PAGE BODY: Changing this section changes the home-page background. */
 .home-page {
   background: radial-gradient(ellipse at 50% 35%, #333 0, #1a1a1a 58%, #121212 100%);
   overflow-x: hidden;
 }
 
 .home-main { min-height: calc(100vh - 58px); display: grid; }
+/* HERO LAYOUT: Changes here position the heading, tagline, button, and map image. */
 .hero-content {
   min-height: calc(100vh - 58px);
   display: grid;

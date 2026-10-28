@@ -1,3 +1,9 @@
+/*
+ * 3D VIEWER STYLES: province artifact and viewertest.html pages
+ * Controls the information sidebar, 3D model area, hotspots, loading/error
+ * state, AR button, fullscreen button, animation controls, and mobile viewer.
+ */
+
 :root {
   --bg-color: #121212;
   --card-bg: #1e1e1e;
@@ -12,6 +18,7 @@
   padding: 0;
 }
 
+/* VIEWER PAGE BODY: Makes the sidebar and 3D model fill the viewport. */
 body {
   display: flex;
   height: 100vh;
@@ -21,6 +28,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* INFORMATION SIDEBAR: Controls artifact text and metadata panel. */
 .info-sidebar {
   width: 35%;
   min-width: 300px;
@@ -75,6 +83,7 @@ body {
   font-size: 0.78rem;
 }
 
+/* 3D VIEWER AREA: Changes the model panel location and background. */
 .viewer-container {
   position: relative;
   flex: 1;
@@ -96,6 +105,7 @@ body {
   display: none;
 }
 
+/* MODEL CALLOUTS: Controls labels and annotation points on the 3D model. */
 .model-hotspot {
   position: relative;
   display: flex;
@@ -149,6 +159,7 @@ body {
   outline-offset: 3px;
 }
 
+/* AR BUTTON: Controls the augmented-reality action button. */
 .ar-button {
   position: absolute;
   top: 1rem;
@@ -184,6 +195,7 @@ body {
   display: none;
 }
 
+/* FULLSCREEN BUTTON: Controls the viewer fullscreen control. */
 .fullscreen-btn {
   position: absolute;
   right: 20px;
@@ -200,6 +212,7 @@ body {
   backdrop-filter: blur(4px);
 }
 
+/* ANIMATION BUTTON: Controls Play/Pause animation behavior and appearance. */
 .animation-btn {
   position: absolute;
   bottom: 20px;
@@ -235,6 +248,7 @@ body {
   color: #000;
 }
 
+/* TABLET/MOBILE VIEWER: Adjusts sidebar and model behavior on narrow screens. */
 @media (max-width: 768px) {
   body {
     flex-direction: column-reverse;

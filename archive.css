@@ -1,3 +1,9 @@
+/*
+ * ARCHIVE PAGE STYLES: all six province *-archive.html files
+ * Controls archive headers, tabs, alphabet filters, artifact/value cards,
+ * scrolling controls, item details, and archive mobile layouts.
+ */
+
 :root {
   color-scheme: dark;
   --bg-color: #121212;
@@ -15,6 +21,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* NAVIGATION: Shared navigation bar used above every archive page. */
 .site-header {
   height: 58px;
   display: flex;
@@ -89,6 +96,7 @@ body.archive-page {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ARCHIVE PAGE LAYOUT: Changes the main content width and outer spacing. */
 .container {
   max-width: 1200px;
   min-height: 100vh;
@@ -96,6 +104,7 @@ body.archive-page {
   padding: 20px;
 }
 
+/* ARCHIVE HEADING: Controls each province title and subtitle area. */
 .archive-header {
   padding: 40px 20px;
   border-bottom: 2px solid var(--accent);
@@ -198,6 +207,7 @@ body.archive-page {
   outline-offset: 3px;
 }
 
+/* ARCHIVE TABS: Controls the Artifact and Values tab row. */
 .archive-tabs {
   display: flex;
   gap: 8px;
@@ -228,6 +238,7 @@ body.archive-page {
   padding-top: 18px;
 }
 
+/* ALPHABET FILTERS: Controls the letter-filter button row. */
 .alphabet-bar {
   display: flex;
   flex-wrap: wrap;
@@ -279,6 +290,7 @@ body.archive-page {
   font-weight: 400;
 }
 
+/* CARD LIST: Changes the scrollable card container and scrollbar. */
 .archive-items {
   display: grid;
   max-height: min(48vh, 420px);
@@ -306,6 +318,7 @@ body.archive-page {
   text-align: center;
 }
 
+/* ARCHIVE CARDS: Changes the size, border, background, and card shadow of every item. */
 .archive-item {
   display: flex;
   min-height: 270px;
@@ -336,6 +349,7 @@ body.archive-page {
   color: inherit;
 }
 
+/* CARD HEADER: Controls the gold title strip containing each item name. */
 .archive-item-header {
   padding: 18px 20px;
   background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
@@ -377,6 +391,7 @@ body.archive-page {
   margin: 0 12px 5px 0;
 }
 
+/* CARD ACTION BUTTON: Changes the View in 3D button appearance. */
 .view-button {
   display: inline-block;
   align-self: flex-start;
@@ -408,6 +423,7 @@ footer {
   text-align: center;
 }
 
+/* MOBILE ARCHIVE: Adjusts archive cards and layout for phones. */
 @media (max-width: 700px) {
   .archive-section {
     padding: 20px 16px;

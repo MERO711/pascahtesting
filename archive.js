@@ -1,3 +1,9 @@
+/*
+ * ARCHIVE PAGE LOGIC: archive.js
+ * Used by every province archive page. This script creates alphabet filters,
+ * opens Artifacts/Values tabs, updates item counts, and scrolls card lists.
+ * Editing selectors in archive.css must match the class names used below.
+ */
 // Build alphabet filters and item counts for each category panel.
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const tabs = Array.from(document.querySelectorAll('[role="tab"]'));

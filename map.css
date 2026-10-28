@@ -1,3 +1,9 @@
+/*
+ * MAP PAGE STYLES: map.html
+ * Controls the navigation, Cordillera map frame, province hit areas,
+ * province labels, hover effects, map hints, and responsive map sizing.
+ */
+
 :root {
   color-scheme: dark;
   --bg-color: #121212;
@@ -87,12 +93,14 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* MAP PAGE CONTAINER: Changes the page width and outer spacing. */
 .map-page {
   width: min(100% - 32px, 1120px);
   margin: 0 auto;
   padding: 24px 0;
 }
 
+/* MAP HEADING: Controls the title and introduction above the province map. */
 .map-header {
   position: relative;
   padding: 18px 16px 24px;
@@ -119,6 +127,7 @@ body {
   font-style: italic;
 }
 
+/* MAP PANEL: Changes the border and background around the map. */
 .map-section {
   padding: 18px;
   border: 1px solid #ffffff1c;
@@ -127,6 +136,7 @@ body {
   text-align: center;
 }
 
+/* MAP FRAME: Controls the map canvas size and positioning coordinate space. */
 .map-frame {
   position: relative;
   width: min(100%, 900px);
@@ -135,6 +145,7 @@ body {
   overflow: visible;
 }
 
+/* PROVINCE HIT AREA: Controls province links and hover stacking behavior. */
 .province-link {
   position: absolute;
   display: block;
@@ -164,6 +175,7 @@ body {
   outline: none;
 }
 
+/* PROVINCE POSITIONS: Each following province block moves one province image label. */
 .province-abra {
   top: 24.8%;
   left: 28.4%;
@@ -251,6 +263,7 @@ footer {
   text-align: center;
 }
 
+/* MOBILE MAP: Adjusts map and header sizing on narrow screens. */
 @media (max-width: 600px) {
   .map-page {
     width: min(100% - 20px, 1120px);
