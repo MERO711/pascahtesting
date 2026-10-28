@@ -3,52 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore the six Cordilleran provinces and their cultural heritage archives." />
-  <title>Explore the Cordilleran Region | PASCAH</title>
-  <link rel="stylesheet" href="map.css" />
+  <meta name="description" content="PASCAH preserves, shares, and celebrates Cordilleran cultures and heritage." />
+  <title>PASCAH | Preserve, Access, Share</title>
+  <link rel="stylesheet" href="map.css?v=2" />
 </head>
-<body>
-  <main class="map-page">
-    <header class="map-header">
-      <p class="eyebrow">PASCAH · DIGITAL MUSEUM</p>
-      <h1>Cordilleran Region</h1>
-      <p>Select a province to explore its archive.</p>
-    </header>
+<body class="home-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="PASCAH home">
+      <span class="brand-mark" aria-hidden="true"><span>P</span></span>
+      <span class="brand-name">PASCAH</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="index.html"><span aria-hidden="true">⌂</span> Home</a>
+      <a href="map.html"><span aria-hidden="true">⌖</span> Map</a>
+      <a href="about.html"><span aria-hidden="true">♟</span> About Us</a>
+    </nav>
+  </header>
 
-    <section class="map-section" aria-labelledby="province-map-title">
-      <h2 id="province-map-title" class="visually-hidden">Interactive map of the Cordilleran provinces</h2>
-      <div class="map-frame">
-        <a class="province-link province-abra" href="abra-archive.html" aria-label="Open the Abra archive">
-          <img src="Cordi%20Map/abra-text.png" alt="Abra" />
-        </a>
-        <a class="province-link province-apayao" href="apayao-archive.html" aria-label="Open the Apayao archive">
-          <img src="Cordi%20Map/apayao-text.png" alt="Apayao" />
-        </a>
-        <a class="province-link province-benguet" href="benguet-archive.html" aria-label="Open the Benguet archive">
-          <img src="Cordi%20Map/benguet-text.png" alt="Benguet" />
-        </a>
-        <a class="province-link province-ifugao" href="ifugao-archive.html" aria-label="Open the Ifugao archive">
-          <img src="Cordi%20Map/ifugao-text.png" alt="Ifugao" />
-        </a>
-        <a class="province-link province-kalinga" href="kalinga-archive.html" aria-label="Open the Kalinga archive">
-          <img src="Cordi%20Map/kalinga-text.png" alt="Kalinga" />
-        </a>
-        <a class="province-link province-mountain-province" href="mountain-province-archive.html" aria-label="Open the Mountain Province archive">
-          <img src="Cordi%20Map/mountain-province-text.png" alt="Mountain Province" />
-        </a>
-
+  <main class="home-main">
+    <aside class="side-pattern side-pattern-left" aria-hidden="true"></aside>
+    <section class="hero-content" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">PASCAH</h1>
+        <p class="hero-tagline"><em>Preserve, Access, Share,<br />Cultures and Heritages</em></p>
+        <p class="hero-description">Explore different cultures and heritages, and immerse yourself with accompanied 3D renditions.</p>
+        <a class="explore-button" href="map.html">Explore</a>
       </div>
-      <p class="map-hint">Hover over a province to highlight it, or select it to open its archive.</p>
-      <nav class="province-list" aria-label="Province archives">
-        <a href="abra-archive.html">Abra</a>
-        <a href="apayao-archive.html">Apayao</a>
-        <a href="benguet-archive.html">Benguet</a>
-        <a href="ifugao-archive.html">Ifugao</a>
-        <a href="kalinga-archive.html">Kalinga</a>
-        <a href="mountain-province-archive.html">Mountain Province</a>
-      </nav>
+      <div class="hero-map" aria-label="Map of the Cordillera Administrative Region">
+        <img src="Cordi%20Map/Cordillera_Map.png" alt="Map of the Cordillera Administrative Region" />
+        <a class="map-play" href="map.html" aria-label="Explore the interactive map"><span aria-hidden="true">▶</span></a>
+      </div>
     </section>
-    <footer>PASCAH · Cultural Heritage Archive</footer>
+    <aside class="side-pattern side-pattern-right" aria-hidden="true"></aside>
   </main>
 </body>
 </html>
