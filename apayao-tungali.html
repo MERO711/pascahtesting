@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- PAGE PURPOSE: 3D artifact viewer page for apayao: uses viewer.css/viewer.js and a model-viewer element. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tungali | PASCCAH</title>
+  <link rel="stylesheet" href="viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="apayao-archive.html" class="back-link">← Back to Apayao Archive</a>
+    <h1>Tungali</h1>
+    <div class="meta-item">Traditional Bamboo Flute</div>
+    <div class="content-section">
+      <!-- Edit these paragraphs to add verified model details, context, and attribution. -->
+      <p>
+        <strong>Purpose:</strong> A traditional bamboo musical instrument used to produce melodies during cultural activities and musical performances.
+      </p>
+      <p>
+        <strong>Materials Used:</strong> Generally made from bamboo shaped into a narrow flute with openings that allow the player to produce different musical tones.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>Interactive Viewer Controls:</strong><br />
+        • <strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.<br />
+        • <strong>Move Camera:</strong> Drag with your mouse (<i>Right Click</i>) or two fingers.<br />
+        • <strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.<br />
+        • <strong>Hotspots:</strong> Select the numbered points on the artifact.<br />
+
+        <!-- Add a QR Code for this section -->
+        • <strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).
+      </p>
+
+      <br>
+      <p>
+        <strong>References</strong>:
+      </p>
+      <p>
+        Rica, & Rica. (2023, January 31). Amazing Philippine Indigenous bamboo musical instruments – Bamboo Music 101 - Bamboo Bootcamp. Bamboo Bootcamp -. https://bamboobootcamp.org/bamboo-musical-instruments/
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+    <!-- Update src and alt when replacing the GLB; keep ar and ar-modes for AR support. -->
+    <model-viewer
+      id="artifact-viewer"
+      src="3D%20ASSETS/apayao-tungali.glb"
+      alt="Three-dimensional model in the Apayao collection"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="ar-button" slot="ar-button">View in your space</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+  <!-- model-viewer provides the 3D/AR component; viewer.js handles loading and fullscreen behavior. -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>
