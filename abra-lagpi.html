@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- PAGE PURPOSE: 3D artifact viewer page for abra: uses viewer.css/viewer.js and a model-viewer element. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lagpi | PASCCAH</title>
+  <link rel="stylesheet" href="viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="abra-archive.html" class="back-link">← Back to Abra Archive</a>
+    <h1>Lagpi</h1>
+    <div class="meta-item">Traditional Container</div>
+    <div class="content-section">
+      <!-- Edit these paragraphs to add verified model details, context, and attribution. -->
+      <p>
+        <strong>Purpose:</strong> Used by the Tinguian (Itneg) people to carry seeds, harvested crops, tools, and other supplies across rugged mountain trails. Its sturdy structure helps protect the contents during transport.
+      </p>
+      <p>
+        <strong>Materials Used:</strong> Traditionally made from processed forest materials, with a rigid, box-like shape and a fitted lid or top flap. Rattan forms the main structure, while woven nito vines or split bamboo reinforce the edges and joints. It may also include woven shoulder straps for carrying.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>Interactive Viewer Controls:</strong><br />
+        • <strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.<br />
+        • <strong>Move Camera:</strong> Drag with your mouse (<i>Right Click</i>) or two fingers.<br />
+        • <strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.<br />
+        • <strong>Hotspots:</strong> Select the numbered points on the artifact.<br />
+
+        <!-- Add a QR Code for this section -->
+        • <strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).
+      </p>
+
+      <br>
+      <p>
+        <strong>References</strong>:
+      </p>
+      <p>
+        Lahot (A)| Bags and Carrying Accessories | Basketry | Bahay Ugnayanx. (n.d.). Bahay Ugnayan Research Center. https://www.bahayugnayan.org/bagsandaccessories/lahot-(a)
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+    <!-- Update src and alt when replacing the GLB; keep ar and ar-modes for AR support. -->
+    <model-viewer
+      id="artifact-viewer"
+      src="3D%20ASSETS/abra-lagpi.glb"
+      alt="Three-dimensional model in the Abra collection"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="ar-button" slot="ar-button">View in your space</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+  <!-- model-viewer provides the 3D/AR component; viewer.js handles loading and fullscreen behavior. -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>
