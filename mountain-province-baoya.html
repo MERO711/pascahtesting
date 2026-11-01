@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- PAGE PURPOSE: 3D artifact viewer page for mountain-province: uses viewer.css/viewer.js and a model-viewer element. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baoya | PASCCAH</title>
+  <link rel="stylesheet" href="viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="mountain-province-archive.html" class="back-link">← Back to Mountain Province Archive</a>
+    <h1>Baoya</h1>
+    <div class="meta-item">Traditional Necklace</div>
+    <div class="content-section">
+      <!-- Edit these paragraphs to add verified model details, context, and attribution. -->
+      <p>
+        <strong>Purpose:</strong> Traditionally worn by elite Bontok men, warriors, and priests during major celebrations, traditional dances, and agricultural ceremonies such as the begnas. It is also associated with historical warrior traditions and may be passed down as a family heirloom.
+      </p>
+      <p>
+        <strong>Materials Used:</strong> Made from wild boar tusks or polished mother-of-pearl shaped like teeth. These pieces are arranged and secured to a sturdy woven band made from rattan and runo reeds.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>Interactive Viewer Controls:</strong><br />
+        • <strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.<br />
+        • <strong>Move Camera:</strong> Drag with your mouse (<i>Right Click</i>) or two fingers.<br />
+        • <strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.<br />
+        • <strong>Hotspots:</strong> Select the numbered points on the artifact.<br />
+
+        <!-- Add a QR Code for this section -->
+        • <strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).
+      </p>
+
+      <br>
+      <p>
+        <strong>References</strong>:
+      </p>
+      <p>
+        Necklace (Boaya) | Mapping Philippine Material Culture. (n.d.). Mapping Philippine Material Culture. https://philippinestudies.uk/mapping/items/show/15355
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+    <!-- Update src and alt when replacing the GLB; keep ar and ar-modes for AR support. -->
+    <model-viewer
+      id="artifact-viewer"
+      src="3D%20ASSETS/mt.province-baoya.glb"
+      alt="Three-dimensional model in the Mountain Province collection"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="ar-button" slot="ar-button">View in your space</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+  <!-- model-viewer provides the 3D/AR component; viewer.js handles loading and fullscreen behavior. -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>
