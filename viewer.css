@@ -5,19 +5,20 @@
  */
 
 :root {
+  color-scheme: light;
   /* COLOR GUIDE: These five variables cover the viewer body, sidebar, text, and gold accents.
      --card-bg is the sidebar background; --bg-color is the page/model-viewer fallback background.
      Hard-coded button, hotspot, label, and loading colors are documented beside each section. */
   /* COLOR-EDIT: Viewer and fullscreen fallback background. */
-  --bg-color: #121212;
+  --bg-color: #EDE9D0;
   /* COLOR-EDIT: Information-sidebar background. */
-  --card-bg: #1e1e1e;
+  --card-bg: #F5F1DE;
   /* COLOR-EDIT: Sidebar and control text. */
-  --text-main: #e0e0e0;
+  --text-main: #333333;
   /* COLOR-EDIT: Metadata and model-credit text. */
-  --text-muted: #a0a0a0;
+  --text-muted: #6F685A;
   /* COLOR-EDIT: Gold links, headings, hotspots, progress, and hover states. */
-  --accent: #d4af37;
+  --accent: #B86B43;
 }
 
 * {
@@ -43,7 +44,7 @@ body {
   padding: 2rem;
   overflow-y: auto;
   /* COLOR-EDIT: Sidebar right divider border. */
-  border-right: 1px solid #2a2a2a;
+  border-right: 1px solid #B86B4366;
   /* COLOR-EDIT: Sidebar panel background. */
   background: var(--card-bg);
 }
@@ -89,7 +90,7 @@ body {
 .model-credit {
   padding-top: 0.8rem;
   /* COLOR-EDIT: Model-credit top divider. */
-  border-top: 1px solid #3a3a3a;
+  border-top: 1px solid #B86B4366;
   color: var(--text-muted);
   font-size: 0.78rem;
 }
@@ -100,7 +101,7 @@ body {
   flex: 1;
   min-width: 0;
   /* COLOR-EDIT: Black/3D model area background. */
-  background: #000;
+  background: radial-gradient(ellipse at 50% 35%, #F5F1DE 0, #EDE9D0 58%, #DDD7BA 100%);
 }
 
 #artifact-viewer {
@@ -108,7 +109,7 @@ body {
   width: 100%;
   height: 100%;
   /* 3D MODEL COLORS: Change --poster-color for the loading poster and --progress-bar-color for loading progress. */
-  --poster-color: #000;
+  --poster-color: #EDE9D0;
   --progress-bar-color: var(--accent);
   --progress-bar-height: 3px;
   --ar-button-display: block;
@@ -127,7 +128,7 @@ body {
   border: 0;
   padding: 0;
   background: transparent;
-  color: #fff;
+  color: #333333;
   cursor: pointer;
   font: inherit;
   text-align: left;
@@ -140,16 +141,16 @@ body {
   flex: 0 0 2rem;
   place-items: center;
   /* COLOR-EDIT: Hotspot number circle border and shadow colors. */
-  border: 2px solid #fff;
+  border: 2px solid #333333;
   border-radius: 50%;
   /* COLOR-EDIT: Hotspot filled circle. */
   background: var(--accent);
   /* COLOR-EDIT: Number text inside each hotspot. */
-  color: #17130a;
+  color: #333333;
   font-size: 0.9rem;
   font-weight: 800;
   /* COLOR-EDIT: Shadow around hotspot number circles. */
-  box-shadow: 0 2px 10px #0009;
+  box-shadow: 0 2px 10px #33333355;
 }
 
 .hotspot-label {
@@ -157,16 +158,16 @@ body {
   max-width: 15rem;
   padding: 0.55rem 0.7rem;
   /* COLOR-EDIT: Expanded hotspot label border. */
-  border: 1px solid #ffffff40;
+  border: 1px solid #B86B4366;
   border-radius: 0.45rem;
   /* COLOR-EDIT: Expanded hotspot label background. */
-  background: #171717e8;
+  background: #F5F1DEE8;
   /* COLOR-EDIT: Expanded hotspot label text. */
-  color: #f5f5f5;
+  color: #333333;
   font-size: 0.78rem;
   line-height: 1.4;
   /* COLOR-EDIT: Shadow around expanded hotspot labels. */
-  box-shadow: 0 3px 12px #0008;
+  box-shadow: 0 3px 12px #33333355;
 }
 
 .model-hotspot.is-expanded .hotspot-label {
@@ -177,7 +178,7 @@ body {
 .ar-button:focus-visible,
 .fullscreen-btn:focus-visible {
   /* COLOR-EDIT: White keyboard-focus outline for viewer controls and hotspots. */
-  outline: 3px solid #fff;
+  outline: 3px solid #333333;
   outline-offset: 3px;
 }
 
@@ -190,9 +191,9 @@ body {
   border-radius: 999px;
   padding: 0.75rem 1rem;
   /* COLOR-EDIT: AR-button background. */
-  background: #171717e8;
+  background: #F5F1DEE8;
   /* COLOR-EDIT: AR-button text. */
-  color: #fff;
+  color: #333333;
   cursor: pointer;
   font: inherit;
   font-weight: 700;
@@ -202,7 +203,7 @@ body {
   /* COLOR-EDIT: AR-button hover background. */
   background: var(--accent);
   /* COLOR-EDIT: AR-button hover text. */
-  color: #111;
+  color: #F5F1DE;
 }
 
 .model-loading {
@@ -213,8 +214,8 @@ body {
   padding: 0.5rem 0.75rem;
   border-radius: 0.35rem;
   /* COLOR-EDIT: Loading/error-message background and text. */
-  background: #171717d9;
-  color: #fff;
+  background: #F5F1DED9;
+  color: #333333;
   font-size: 0.85rem;
 }
 
@@ -228,11 +229,11 @@ body {
   right: 20px;
   bottom: 20px;
   /* COLOR-EDIT: Fullscreen button border. */
-  border: 1px solid #444;
+  border: 1px solid #B86B4366;
   border-radius: 6px;
   padding: 10px 16px;
   /* COLOR-EDIT: Fullscreen button background and text. */
-  background: #1e1e1ed9;
+  background: #F5F1DED9;
   color: var(--text-main);
   cursor: pointer;
   font-size: 0.9rem;
@@ -251,7 +252,7 @@ body {
   border-radius: 6px;
   padding: 10px 16px;
   /* COLOR-EDIT: Animation-button background. */
-  background: #1e1e1ed9;
+  background: #F5F1DED9;
   color: var(--text-main);
   cursor: pointer;
   font-size: 0.9rem;
@@ -260,7 +261,7 @@ body {
 
 .animation-btn:hover:not(:disabled) {
   background: var(--accent);
-  color: #000;
+  color: #333333;
 }
 
 .animation-btn:disabled {
@@ -269,14 +270,14 @@ body {
 }
 
 .animation-btn:focus-visible {
-  outline: 3px solid #fff;
+  outline: 3px solid #333333;
   outline-offset: 3px;
 }
 
 .fullscreen-btn:hover {
   border-color: var(--accent);
   background: var(--accent);
-  color: #000;
+  color: #333333;
 }
 
 /* TABLET/MOBILE VIEWER: Adjusts sidebar and model behavior on narrow screens. */

@@ -6,18 +6,18 @@
 
 /* MAP COLOR OVERRIDES: The map page repeats the shared palette for page-specific color control. */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   /* COLOR GUIDE: These variables control the map page's shared text and gold accent.
-     Change #c6a747 for the map intro, the body gradient for the page background,
-     and #ffffff1c for the map panel border. */
+     Change #B86B43 for the map intro, the cream/beige body gradient,
+     and #B86B4366 for the map panel border. */
   /* COLOR-EDIT: Map page reserved background value. */
-  --bg-color: #121212;
+  --bg-color: #EDE9D0;
   /* COLOR-EDIT: Main map-page text and navigation text. */
-  --text-main: #e0e0e0;
+  --text-main: #333333;
   /* COLOR-EDIT: Map hint and muted supporting text. */
-  --text-muted: #a0a0a0;
+  --text-muted: #6F685A;
   /* COLOR-EDIT: Gold headings, navigation accents, province-related labels, and borders. */
-  --accent: #d4af37;
+  --accent: #B86B43;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,7 +25,7 @@ html { min-width: 320px; }
 body {
   min-height: 100vh;
   /* COLOR-EDIT: Map page body gradient. */
-  background: radial-gradient(ellipse at 50% 28%, #333 0, #1a1a1a 58%, #121212 100%);
+  background: radial-gradient(ellipse at 50% 28%, #F5F1DE 0, #EDE9D0 58%, #DDD7BA 100%);
   color: var(--text-main);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -39,9 +39,9 @@ body {
   position: relative;
   z-index: 20;
   /* COLOR-EDIT: Map navigation bottom border. */
-  border-bottom: 1px solid #d4af3740;
+  border-bottom: 1px solid #B86B43;
   /* COLOR-EDIT: Map navigation background. */
-  background: #121212;
+  background: #D95F16;
 }
 
 .brand { display: flex; align-items: center; gap: 10px; color: var(--accent); text-decoration: none; }
@@ -53,10 +53,10 @@ body {
   border: 2px solid var(--accent);
   border-radius: 50%;
   /* COLOR-EDIT: Logo circle background. */
-  background: #1e1e1e;
+  background: #EDE9D0;
   object-fit: cover;
 }
-.brand-name { font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
+.brand-name { color: #333333; font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
 /* COLOR-EDIT: Navigation link text uses --text-main; number symbols and active/hover links use --accent. */
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav a {
@@ -66,10 +66,11 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-.main-nav a span { margin-right: 4px; color: var(--accent); }
+.main-nav a span { margin-right: 4px; color: #333333; }
+.main-nav a:active { color: #333333; }
 .main-nav a:hover,
 .main-nav a:focus-visible,
-.main-nav a.active { color: var(--accent); }
+.main-nav a.active { color: #333333; }
 .main-nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
 @media (max-width: 900px) {
@@ -86,11 +87,11 @@ body {
 }
 
 :root {
-  color-scheme: dark;
-  --bg-color: #121212;
-  --text-main: #e0e0e0;
-  --text-muted: #a0a0a0;
-  --accent: #d4af37;
+  color-scheme: light;
+  --bg-color: #EDE9D0;
+  --text-main: #333333;
+  --text-muted: #6F685A;
+  --accent: #B86B43;
 }
 
 * {
@@ -101,7 +102,7 @@ body {
 
 body {
   min-height: 100vh;
-  background: radial-gradient(ellipse at 50% 28%, #333 0, #1a1a1a 58%, #121212 100%);
+  background: radial-gradient(ellipse at 50% 28%, #F5F1DE 0, #EDE9D0 58%, #DDD7BA 100%);
   color: var(--text-main);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -134,12 +135,12 @@ body {
   color: var(--accent);
   font-size: clamp(2rem, 5vw, 3.2rem);
   /* COLOR-EDIT: Shadow behind the "Explore the Cordillera Region" heading. */
-  text-shadow: 2px 2px 4px #0008;
+  text-shadow: 2px 2px 4px #33333355;
 }
 
 .map-header > p:last-child {
   /* COLOR-EDIT: Gold/italic introductory text below the map heading. */
-  color: #c6a747;
+  color: #B86B43;
   font-style: italic;
 }
 
@@ -147,7 +148,7 @@ body {
 .map-section {
   padding: 18px;
   /* COLOR-EDIT: Map panel border. */
-  border: 1px solid #ffffff1c;
+  border: 1px solid #B86B4366;
   border-radius: 12px;
   /* COLOR-EDIT: Map panel background (transparent by default). */
   background: transparent;
@@ -186,7 +187,7 @@ body {
 .province-link:hover img,
 .province-link:focus-visible img {
   /* COLOR-EDIT: Province hover/focus shadow. */
-  filter: drop-shadow(0 4px 7px #0008);
+  filter: drop-shadow(0 4px 7px #33333355);
   transform: scale(1.045);
 }
 
@@ -250,9 +251,9 @@ footer {
   margin-top: 22px;
   padding: 18px;
   /* COLOR-EDIT: Footer top border. */
-  border-top: 1px solid #d4af3780;
+  border-top: 1px solid #B86B43;
   /* COLOR-EDIT: Footer text. */
-  color: #808080;
+  color: #6F685A;
   text-align: center;
 }
 

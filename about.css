@@ -5,7 +5,7 @@
  */
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   /* COLOR GUIDE: --text-main, --text-muted, and --accent are shared text/accent colors.
      Change them here first. --bg-color is the reserved page background variable; the
      visible page gradients below currently use their own hard-coded colors. */
@@ -14,16 +14,16 @@
   /* COLOR-EDIT: Main body and member-name text. */
   --text-main: #333;
   /* COLOR-EDIT: Muted text and supporting copy. */
-  --text-muted: #333;
+  --text-muted: #6F685A;
   /* COLOR-EDIT: Gold/accent text, links, heading, stars, borders, and logo accents. */
-  --accent: #EDE9D0;
+  --accent: #B86B43;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { min-width: 320px; }
 body {
   min-height: 100vh;
-  /* MAIN PAGE GRADIENT: Change these three #333/#1a1a1a/#121212 stops for the about-page background. */
+  /* MAIN PAGE GRADIENT: Change the cream gradient stops for the About Us page background. */
   background: radial-gradient(ellipse at 50% 35%, #E6E1C5 0, #EDE9D0 85%, #e6e4d7 100%);
   color: var(--text-main);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -39,7 +39,7 @@ body {
   position: relative;
   z-index: 20;
   /* COLOR-EDIT: Navigation top border. */
-  border-bottom: 1px solid #d4af3740;
+  border-bottom: 1px solid #B86B43;
   /* COLOR-EDIT: Navigation bar background. */
   background: #D95F16;
 }
@@ -56,7 +56,7 @@ body {
   background: #EDE9D0;
   object-fit: cover;
 }
-.brand-name { color: var(--accent);font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
+.brand-name { color: #333333; font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
 /* COLOR-EDIT: Navigation link text uses --text-main; number symbols and active/hover links use --accent. */
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav a {
@@ -66,10 +66,11 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-.main-nav a span { margin-right: 4px; color: var(--accent); }
+.main-nav a span { margin-right: 4px; color: #333333; }
+.main-nav a:active { color: #333333; }
 .main-nav a:hover,
 .main-nav a:focus-visible,
-.main-nav a.active { color: var(--accent); }
+.main-nav a.active { color: #333333; }
 .main-nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
 @media (max-width: 900px) {
@@ -95,6 +96,7 @@ body {
 .about-main { min-height: calc(100vh - 58px); padding: 30px 24px 40px; }
 .about-main > h1 {
   margin-bottom: 22px;
+  color: var(--accent);
   text-align: center;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
