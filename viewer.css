@@ -5,10 +5,18 @@
  */
 
 :root {
+  /* COLOR GUIDE: These five variables cover the viewer body, sidebar, text, and gold accents.
+     --card-bg is the sidebar background; --bg-color is the page/model-viewer fallback background.
+     Hard-coded button, hotspot, label, and loading colors are documented beside each section. */
+  /* COLOR-EDIT: Viewer and fullscreen fallback background. */
   --bg-color: #121212;
+  /* COLOR-EDIT: Information-sidebar background. */
   --card-bg: #1e1e1e;
+  /* COLOR-EDIT: Sidebar and control text. */
   --text-main: #e0e0e0;
+  /* COLOR-EDIT: Metadata and model-credit text. */
   --text-muted: #a0a0a0;
+  /* COLOR-EDIT: Gold links, headings, hotspots, progress, and hover states. */
   --accent: #d4af37;
 }
 
@@ -34,7 +42,9 @@ body {
   min-width: 300px;
   padding: 2rem;
   overflow-y: auto;
+  /* COLOR-EDIT: Sidebar right divider border. */
   border-right: 1px solid #2a2a2a;
+  /* COLOR-EDIT: Sidebar panel background. */
   background: var(--card-bg);
 }
 
@@ -78,6 +88,7 @@ body {
 
 .model-credit {
   padding-top: 0.8rem;
+  /* COLOR-EDIT: Model-credit top divider. */
   border-top: 1px solid #3a3a3a;
   color: var(--text-muted);
   font-size: 0.78rem;
@@ -88,6 +99,7 @@ body {
   position: relative;
   flex: 1;
   min-width: 0;
+  /* COLOR-EDIT: Black/3D model area background. */
   background: #000;
 }
 
@@ -95,6 +107,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+  /* 3D MODEL COLORS: Change --poster-color for the loading poster and --progress-bar-color for loading progress. */
   --poster-color: #000;
   --progress-bar-color: var(--accent);
   --progress-bar-height: 3px;
@@ -126,12 +139,16 @@ body {
   height: 2rem;
   flex: 0 0 2rem;
   place-items: center;
+  /* COLOR-EDIT: Hotspot number circle border and shadow colors. */
   border: 2px solid #fff;
   border-radius: 50%;
+  /* COLOR-EDIT: Hotspot filled circle. */
   background: var(--accent);
+  /* COLOR-EDIT: Number text inside each hotspot. */
   color: #17130a;
   font-size: 0.9rem;
   font-weight: 800;
+  /* COLOR-EDIT: Shadow around hotspot number circles. */
   box-shadow: 0 2px 10px #0009;
 }
 
@@ -139,12 +156,16 @@ body {
   display: none;
   max-width: 15rem;
   padding: 0.55rem 0.7rem;
+  /* COLOR-EDIT: Expanded hotspot label border. */
   border: 1px solid #ffffff40;
   border-radius: 0.45rem;
+  /* COLOR-EDIT: Expanded hotspot label background. */
   background: #171717e8;
+  /* COLOR-EDIT: Expanded hotspot label text. */
   color: #f5f5f5;
   font-size: 0.78rem;
   line-height: 1.4;
+  /* COLOR-EDIT: Shadow around expanded hotspot labels. */
   box-shadow: 0 3px 12px #0008;
 }
 
@@ -155,6 +176,7 @@ body {
 .model-hotspot:focus-visible,
 .ar-button:focus-visible,
 .fullscreen-btn:focus-visible {
+  /* COLOR-EDIT: White keyboard-focus outline for viewer controls and hotspots. */
   outline: 3px solid #fff;
   outline-offset: 3px;
 }
@@ -167,7 +189,9 @@ body {
   border: 1px solid var(--accent);
   border-radius: 999px;
   padding: 0.75rem 1rem;
+  /* COLOR-EDIT: AR-button background. */
   background: #171717e8;
+  /* COLOR-EDIT: AR-button text. */
   color: #fff;
   cursor: pointer;
   font: inherit;
@@ -175,7 +199,9 @@ body {
 }
 
 .ar-button:hover {
+  /* COLOR-EDIT: AR-button hover background. */
   background: var(--accent);
+  /* COLOR-EDIT: AR-button hover text. */
   color: #111;
 }
 
@@ -186,6 +212,7 @@ body {
   transform: translateX(-50%);
   padding: 0.5rem 0.75rem;
   border-radius: 0.35rem;
+  /* COLOR-EDIT: Loading/error-message background and text. */
   background: #171717d9;
   color: #fff;
   font-size: 0.85rem;
@@ -200,9 +227,11 @@ body {
   position: absolute;
   right: 20px;
   bottom: 20px;
+  /* COLOR-EDIT: Fullscreen button border. */
   border: 1px solid #444;
   border-radius: 6px;
   padding: 10px 16px;
+  /* COLOR-EDIT: Fullscreen button background and text. */
   background: #1e1e1ed9;
   color: var(--text-main);
   cursor: pointer;
@@ -217,9 +246,11 @@ body {
   position: absolute;
   bottom: 20px;
   left: 20px;
+  /* COLOR-EDIT: Animation-button border. */
   border: 1px solid var(--accent);
   border-radius: 6px;
   padding: 10px 16px;
+  /* COLOR-EDIT: Animation-button background. */
   background: #1e1e1ed9;
   color: var(--text-main);
   cursor: pointer;

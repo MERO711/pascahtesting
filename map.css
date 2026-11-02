@@ -4,11 +4,19 @@
  * province labels, hover effects, map hints, and responsive map sizing.
  */
 
+/* MAP COLOR OVERRIDES: The map page repeats the shared palette for page-specific color control. */
 :root {
   color-scheme: dark;
+  /* COLOR GUIDE: These variables control the map page's shared text and gold accent.
+     Change #c6a747 for the map intro, the body gradient for the page background,
+     and #ffffff1c for the map panel border. */
+  /* COLOR-EDIT: Map page reserved background value. */
   --bg-color: #121212;
+  /* COLOR-EDIT: Main map-page text and navigation text. */
   --text-main: #e0e0e0;
+  /* COLOR-EDIT: Map hint and muted supporting text. */
   --text-muted: #a0a0a0;
+  /* COLOR-EDIT: Gold headings, navigation accents, province-related labels, and borders. */
   --accent: #d4af37;
 }
 
@@ -16,6 +24,7 @@
 html { min-width: 320px; }
 body {
   min-height: 100vh;
+  /* COLOR-EDIT: Map page body gradient. */
   background: radial-gradient(ellipse at 50% 28%, #333 0, #1a1a1a 58%, #121212 100%);
   color: var(--text-main);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -29,7 +38,9 @@ body {
   padding: 0 48px;
   position: relative;
   z-index: 20;
+  /* COLOR-EDIT: Map navigation bottom border. */
   border-bottom: 1px solid #d4af3740;
+  /* COLOR-EDIT: Map navigation background. */
   background: #121212;
 }
 
@@ -41,10 +52,12 @@ body {
   place-items: center;
   border: 2px solid var(--accent);
   border-radius: 50%;
+  /* COLOR-EDIT: Logo circle background. */
   background: #1e1e1e;
   object-fit: cover;
 }
 .brand-name { font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
+/* COLOR-EDIT: Navigation link text uses --text-main; number symbols and active/hover links use --accent. */
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav a {
   color: var(--text-main);
@@ -108,6 +121,7 @@ body {
 }
 
 .eyebrow {
+  /* COLOR-EDIT: Small gold text above the map heading. */
   color: var(--accent);
   font-size: 0.78rem;
   font-weight: 700;
@@ -119,10 +133,12 @@ body {
   margin: 9px 0 5px;
   color: var(--accent);
   font-size: clamp(2rem, 5vw, 3.2rem);
+  /* COLOR-EDIT: Shadow behind the "Explore the Cordillera Region" heading. */
   text-shadow: 2px 2px 4px #0008;
 }
 
 .map-header > p:last-child {
+  /* COLOR-EDIT: Gold/italic introductory text below the map heading. */
   color: #c6a747;
   font-style: italic;
 }
@@ -130,8 +146,10 @@ body {
 /* MAP PANEL: Changes the border and background around the map. */
 .map-section {
   padding: 18px;
+  /* COLOR-EDIT: Map panel border. */
   border: 1px solid #ffffff1c;
   border-radius: 12px;
+  /* COLOR-EDIT: Map panel background (transparent by default). */
   background: transparent;
   text-align: center;
 }
@@ -167,6 +185,7 @@ body {
 
 .province-link:hover img,
 .province-link:focus-visible img {
+  /* COLOR-EDIT: Province hover/focus shadow. */
   filter: drop-shadow(0 4px 7px #0008);
   transform: scale(1.045);
 }
@@ -230,7 +249,9 @@ body {
 footer {
   margin-top: 22px;
   padding: 18px;
+  /* COLOR-EDIT: Footer top border. */
   border-top: 1px solid #d4af3780;
+  /* COLOR-EDIT: Footer text. */
   color: #808080;
   text-align: center;
 }

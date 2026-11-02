@@ -6,17 +6,25 @@
 
 :root {
   color-scheme: dark;
-  --bg-color: #121212;
-  --text-main: #e0e0e0;
-  --text-muted: #a0a0a0;
-  --accent: #d4af37;
+  /* COLOR GUIDE: --text-main, --text-muted, and --accent are shared text/accent colors.
+     Change them here first. --bg-color is the reserved page background variable; the
+     visible page gradients below currently use their own hard-coded colors. */
+  /* COLOR-EDIT: Page background variable (currently the first beige value). */
+  --bg-color: #EDE9D0;
+  /* COLOR-EDIT: Main body and member-name text. */
+  --text-main: #333;
+  /* COLOR-EDIT: Muted text and supporting copy. */
+  --text-muted: #333;
+  /* COLOR-EDIT: Gold/accent text, links, heading, stars, borders, and logo accents. */
+  --accent: #EDE9D0;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { min-width: 320px; }
 body {
   min-height: 100vh;
-  background: radial-gradient(ellipse at 50% 28%, #333 0, #1a1a1a 58%, #121212 100%);
+  /* MAIN PAGE GRADIENT: Change these three #333/#1a1a1a/#121212 stops for the about-page background. */
+  background: radial-gradient(ellipse at 50% 35%, #E6E1C5 0, #EDE9D0 85%, #e6e4d7 100%);
   color: var(--text-main);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -30,8 +38,10 @@ body {
   padding: 0 48px;
   position: relative;
   z-index: 20;
+  /* COLOR-EDIT: Navigation top border. */
   border-bottom: 1px solid #d4af3740;
-  background: #121212;
+  /* COLOR-EDIT: Navigation bar background. */
+  background: #D95F16;
 }
 
 .brand { display: flex; align-items: center; gap: 10px; color: var(--accent); text-decoration: none; }
@@ -42,10 +52,12 @@ body {
   place-items: center;
   border: 2px solid var(--accent);
   border-radius: 50%;
-  background: #1e1e1e;
+  /* COLOR-EDIT: Circular logo/background behind the PASCCAH icon. */
+  background: #EDE9D0;
   object-fit: cover;
 }
-.brand-name { font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
+.brand-name { color: var(--accent);font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
+/* COLOR-EDIT: Navigation link text uses --text-main; number symbols and active/hover links use --accent. */
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav a {
   color: var(--text-main);
@@ -77,19 +89,19 @@ body {
 /* ABOUT PAGE BACKGROUND: Changes the page background behind the team cards. */
 .about-page {
   min-height: 100vh;
-  background: radial-gradient(ellipse at 50% 35%, #333 0, #1a1a1a 58%, #121212 100%);
+  /* COLOR-EDIT: Background gradient behind the About Us title and team cards. */
+  background: radial-gradient(ellipse at 50% 35%, #E6E1C5 0, #EDE9D0 85%, #e6e4d7 100%);
 }
 .about-main { min-height: calc(100vh - 58px); padding: 30px 24px 40px; }
 .about-main > h1 {
   margin-bottom: 22px;
-  color: var(--accent);
   text-align: center;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 /* TEAM GRID: Controls the overall three-card layout and spacing. */
 .team-grid {
   width: min(1328px, 100%);
-  min-height: 520px;
+  min-height: 480px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -103,14 +115,13 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 58px 28px 30px;
-  border: 1px solid #ffffff1c;
+  /* COLOR-EDIT: Team-card border and background, affecting every standard card. */
+  border: 3px solid #1514141c;
   border-radius: 12px;
-  background: #1e1e1e;
+  background: #EDE9D0;
   text-align: center;
 }
-/* FEATURED CARD: Changes only the highlighted center card. */
-.team-card-featured { border-color: #d4af3770; background: #252525; }
-/* ROLE RATING: Controls the stars and role labels above member names. */
+
 .team-role {
   height: 42px;
   display: flex;

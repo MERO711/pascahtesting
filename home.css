@@ -6,9 +6,16 @@
 
 :root {
   color-scheme: dark;
+  /* COLOR GUIDE: Change --bg-color, --text-main, --text-muted, and --accent here for
+     the home page's shared background, text, muted text, gold, and button colors.
+     Gradients and hover colors below also contain separate hard-coded values. */
+  /* COLOR-EDIT: Home page reserved background value. */
   --bg-color: #121212;
+  /* COLOR-EDIT: Main heading/body text. */
   --text-main: #e0e0e0;
+  /* COLOR-EDIT: Secondary description text. */
   --text-muted: #a0a0a0;
+  /* COLOR-EDIT: Gold accent, button fill, links, navigation hover, and headings. */
   --accent: #d4af37;
 }
 
@@ -16,6 +23,7 @@
 html { min-width: 320px; }
 body {
   min-height: 100vh;
+  /* COLOR-EDIT: Main page gradient. Replace the three displayed hex values. */
   background: radial-gradient(ellipse at 50% 28%, #333 0, #1a1a1a 58%, #121212 100%);
   color: var(--text-main);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +38,9 @@ body {
   padding: 0 48px;
   position: relative;
   z-index: 20;
+  /* COLOR-EDIT: Navigation bottom border. */
   border-bottom: 1px solid #d4af3740;
+  /* COLOR-EDIT: Navigation bar background. */
   background: #121212;
 }
 
@@ -42,10 +52,12 @@ body {
   place-items: center;
   border: 2px solid var(--accent);
   border-radius: 50%;
+  /* COLOR-EDIT: Logo circle background. */
   background: #1e1e1e;
   object-fit: cover;
 }
 .brand-name { font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
+/* COLOR-EDIT: Navigation link text uses --text-main; number symbols and active/hover links use --accent. */
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav a {
   color: var(--text-main);
@@ -77,6 +89,7 @@ body {
 
 /* HOME PAGE BODY: Changing this section changes the home-page background. */
 .home-page {
+  /* COLOR-EDIT: Home page content/background gradient. */
   background: radial-gradient(ellipse at 50% 35%, #333 0, #1a1a1a 58%, #121212 100%);
   overflow-x: hidden;
 }
@@ -92,12 +105,15 @@ body {
 }
 .hero-copy h1 {
   margin-bottom: 4px;
+  /* COLOR-EDIT: Main hero title text. */
   color: var(--accent);
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1;
+  /* COLOR-EDIT: Shadow beneath the main hero heading. */
   text-shadow: 2px 2px 4px #0008;
 }
 .hero-tagline { margin-top: 10px; color: var(--text-main); font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.25; }
+/* COLOR-EDIT: Hero description text. */
 .hero-description {
   max-width: 590px;
   margin: 34px 0 22px;
@@ -112,13 +128,16 @@ body {
   place-items: center;
   border: 1px solid var(--accent);
   border-radius: 999px;
+  /* COLOR-EDIT: Explore-button background; text color is the next declaration. */
   background: var(--accent);
+  /* COLOR-EDIT: Explore-button label text. */
   color: #111;
   font-size: 0.82rem;
   font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
 }
+/* COLOR-EDIT: Explore-button hover/focus background. */
 .explore-button:hover,
 .explore-button:focus-visible { background: #f1c40f; }
 .hero-map { position: relative; width: 100%; max-width: 650px; justify-self: center; }
@@ -127,6 +146,7 @@ body {
   max-height: calc(100vh - 110px);
   display: block;
   object-fit: contain;
+  /* COLOR-EDIT: Shadow cast by the Cordillera map image. */
   filter: drop-shadow(9px 14px 14px #0008);
 }
 
