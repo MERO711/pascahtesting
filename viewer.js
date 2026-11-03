@@ -33,6 +33,17 @@ viewer.querySelectorAll('.model-hotspot').forEach((hotspot) => {
 
     hotspot.classList.toggle('is-expanded', isExpanded);
     hotspot.setAttribute('aria-expanded', String(isExpanded));
+
+    const audioId = hotspot.dataset.audio;
+    if (audioId && isExpanded) {
+      const audio = document.getElementById(audioId);
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play().catch((error) => {
+          console.error('Unable to play hotspot audio:', error);
+        });
+      }
+    }
   });
 });
 
