@@ -61,14 +61,17 @@
       exposure="1"
       interaction-prompt="auto"
       loading="eager">
-      <button class="model-hotspot" slot="hotspot-top" data-position="0 0.95 0" data-normal="0 1 0" aria-label="Play the sound of the solibao" data-audio="solibao-sound">
+      <button class="model-hotspot" slot="hotspot-top" data-position="0.01 0.95 0.01" data-normal="0 1 0" aria-label="Play the sound of the solibao" data-audio="solibao-sound">
         <span class="hotspot-number">1</span>
         <span class="hotspot-label"><strong>Sound of Solibao*</strong></span>
       </button>
+      <audio id="solibao-sound" preload="auto">
+        <source src="Audio%20Assets/solibao-sound.mp3" type="audio/mpeg">
+      </audio>
       <button class="model-hotspot" slot="hotspot-strings" data-position="0 0.70 0.045" data-normal="0 0 1" aria-label="Rim and neck detail">
         <span class="hotspot-number">2</span><span class="hotspot-label"><strong>Strings</strong> — Rattan (Wey): This is the most authentic and culturally accurate material used by Cordilleran artisans. Rattan is a naturally flexible, vine-like palm that becomes incredibly tough and rigid once dried, allowing it to hold tension over long periods without snapping under heavy drumming.</span>
       </button>
-      <button class="model-hotspot" slot="hotspot-base" data-position="0 -0.50 0" data-normal="0 -1 0" aria-label="Rounded base detail">
+      <button class="model-hotspot" slot="hotspot-base" data-position="-0.015 -0.50 0" data-normal="0 -1 0.6" aria-label="Rounded base detail">
         <span class="hotspot-number">3</span><span class="hotspot-label"><strong>Base</strong> — Narra (Pterocarpus indicus): This is the top choice for master instrument makers. It is a dense, high-quality hardwood known for its exceptional durability and superior acoustic resonance.</span>
       </button>
       <button class="ar-button" slot="ar-button">View in AR</button>
@@ -77,9 +80,7 @@
     <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
   </main>
 
-  <audio id="solibao-sound" preload="auto">
-    <source src="Audio%20Assets/solibao-sound.mp3" type="audio/mpeg">
-  </audio>
+  
 
   <!-- model-viewer provides the 3D/AR component; viewer.js handles loading and fullscreen behavior. -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
