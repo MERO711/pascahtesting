@@ -45,8 +45,8 @@ body {
   background: #D95F16;
 }
 
-.brand { display: flex; align-items: center; gap: 10px; color: var(--accent); text-decoration: none; }
-.brand-mark {
+.team { display: flex; align-items: center; gap: 10px; color: var(--accent); text-decoration: none; }
+.team-mark {
   width: 42px;
   height: 42px;
   display: grid;
@@ -57,7 +57,7 @@ body {
   background: #EDE9D0;
   object-fit: cover;
 }
-.brand-name { color: #333333; font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
+.team-name { color: #333333; font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav a {
   color: var(--text-main);
@@ -80,8 +80,8 @@ body {
 
 @media (max-width: 680px) {
   .site-header { height: auto; min-height: 58px; padding: 8px 14px; }
-  .brand-name { display: none; }
-  .brand-mark { width: 40px; height: 40px; }
+  .team-name { display: none; }
+  .team-mark { width: 40px; height: 40px; }
   .main-nav { gap: 10px; }
   .main-nav a { font-size: 0.72rem; }
 }
