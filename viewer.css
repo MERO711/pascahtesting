@@ -1,23 +1,14 @@
-/*
- * 3D VIEWER STYLES: province artifact and viewertest.html pages
- * Controls the information sidebar, 3D model area, hotspots, loading/error
- * state, AR button, fullscreen button, animation controls, and mobile viewer.
- */
-
 :root {
   color-scheme: light;
-  /* COLOR GUIDE: These five variables cover the viewer body, sidebar, text, and gold accents.
-     --card-bg is the sidebar background; --bg-color is the page/model-viewer fallback background.
-     Hard-coded button, hotspot, label, and loading colors are documented beside each section. */
-  /* COLOR-EDIT: Viewer and fullscreen fallback background. */
+
   --bg-color: #EDE9D0;
-  /* COLOR-EDIT: Information-sidebar background. */
+
   --card-bg: #F5F1DE;
-  /* COLOR-EDIT: Sidebar and control text. */
+
   --text-main: #333333;
-  /* COLOR-EDIT: Metadata and model-credit text. */
+
   --text-muted: #6F685A;
-  /* COLOR-EDIT: Gold links, headings, hotspots, progress, and hover states. */
+
   --accent: #B86B43;
 }
 
@@ -27,7 +18,7 @@
   padding: 0;
 }
 
-/* VIEWER PAGE BODY: Makes the sidebar and 3D model fill the viewport. */
+
 body {
   display: flex;
   height: 100vh;
@@ -37,15 +28,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* INFORMATION SIDEBAR: Controls artifact text and metadata panel. */
+
 .info-sidebar {
   width: 35%;
   min-width: 300px;
   padding: 2rem;
   overflow-y: auto;
-  /* COLOR-EDIT: Sidebar right divider border. */
+
   border-right: 1px solid #B86B4366;
-  /* COLOR-EDIT: Sidebar panel background. */
+
   background: var(--card-bg);
 }
 
@@ -89,18 +80,18 @@ body {
 
 .model-credit {
   padding-top: 0.8rem;
-  /* COLOR-EDIT: Model-credit top divider. */
+
   border-top: 1px solid #B86B4366;
   color: var(--text-muted);
   font-size: 0.78rem;
 }
 
-/* 3D VIEWER AREA: Changes the model panel location and background. */
+
 .viewer-container {
   position: relative;
   flex: 1;
   min-width: 0;
-  /* COLOR-EDIT: Black/3D model area background. */
+
   background: radial-gradient(ellipse at 50% 35%, #F5F1DE 0, #EDE9D0 58%, #DDD7BA 100%);
 }
 
@@ -108,7 +99,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  /* 3D MODEL COLORS: Change --poster-color for the loading poster and --progress-bar-color for loading progress. */
+
   --poster-color: #EDE9D0;
   --progress-bar-color: var(--accent);
   --progress-bar-height: 3px;
@@ -119,7 +110,7 @@ body {
   display: none;
 }
 
-/* MODEL CALLOUTS: Controls labels and annotation points on the 3D model. */
+
 .model-hotspot {
   position: relative;
   display: flex;
@@ -140,16 +131,16 @@ body {
   height: 2rem;
   flex: 0 0 2rem;
   place-items: center;
-  /* COLOR-EDIT: Hotspot number circle border and shadow colors. */
+
   border: 2px solid #333333;
   border-radius: 50%;
-  /* COLOR-EDIT: Hotspot filled circle. */
+
   background: var(--accent);
-  /* COLOR-EDIT: Number text inside each hotspot. */
+
   color: #333333;
   font-size: 0.9rem;
   font-weight: 800;
-  /* COLOR-EDIT: Shadow around hotspot number circles. */
+
   box-shadow: 0 2px 10px #33333355;
 }
 
@@ -157,16 +148,16 @@ body {
   display: none;
   max-width: 15rem;
   padding: 0.55rem 0.7rem;
-  /* COLOR-EDIT: Expanded hotspot label border. */
+
   border: 1px solid #B86B4366;
   border-radius: 0.45rem;
-  /* COLOR-EDIT: Expanded hotspot label background. */
+
   background: #F5F1DEE8;
-  /* COLOR-EDIT: Expanded hotspot label text. */
+
   color: #333333;
   font-size: 0.78rem;
   line-height: 1.4;
-  /* COLOR-EDIT: Shadow around expanded hotspot labels. */
+
   box-shadow: 0 3px 12px #33333355;
 }
 
@@ -177,12 +168,12 @@ body {
 .model-hotspot:focus-visible,
 .ar-button:focus-visible,
 .fullscreen-btn:focus-visible {
-  /* COLOR-EDIT: White keyboard-focus outline for viewer controls and hotspots. */
+
   outline: 3px solid #333333;
   outline-offset: 3px;
 }
 
-/* AR BUTTON: Controls the augmented-reality action button. */
+
 .ar-button {
   position: absolute;
   top: 1rem;
@@ -190,9 +181,9 @@ body {
   border: 1px solid var(--accent);
   border-radius: 999px;
   padding: 0.75rem 1rem;
-  /* COLOR-EDIT: AR-button background. */
+
   background: #F5F1DEE8;
-  /* COLOR-EDIT: AR-button text. */
+
   color: #333333;
   cursor: pointer;
   font: inherit;
@@ -200,9 +191,9 @@ body {
 }
 
 .ar-button:hover {
-  /* COLOR-EDIT: AR-button hover background. */
+
   background: var(--accent);
-  /* COLOR-EDIT: AR-button hover text. */
+
   color: #F5F1DE;
 }
 
@@ -213,7 +204,7 @@ body {
   transform: translateX(-50%);
   padding: 0.5rem 0.75rem;
   border-radius: 0.35rem;
-  /* COLOR-EDIT: Loading/error-message background and text. */
+
   background: #F5F1DED9;
   color: #333333;
   font-size: 0.85rem;
@@ -223,16 +214,16 @@ body {
   display: none;
 }
 
-/* FULLSCREEN BUTTON: Controls the viewer fullscreen control. */
+
 .fullscreen-btn {
   position: absolute;
   right: 20px;
   bottom: 20px;
-  /* COLOR-EDIT: Fullscreen button border. */
+
   border: 1px solid #B86B4366;
   border-radius: 6px;
   padding: 10px 16px;
-  /* COLOR-EDIT: Fullscreen button background and text. */
+
   background: #F5F1DED9;
   color: var(--text-main);
   cursor: pointer;
@@ -242,16 +233,16 @@ body {
   backdrop-filter: blur(4px);
 }
 
-/* ANIMATION BUTTON: Controls Play/Pause animation behavior and appearance. */
+
 .animation-btn {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  /* COLOR-EDIT: Animation-button border. */
+
   border: 1px solid var(--accent);
   border-radius: 6px;
   padding: 10px 16px;
-  /* COLOR-EDIT: Animation-button background. */
+
   background: #F5F1DED9;
   color: var(--text-main);
   cursor: pointer;
@@ -280,7 +271,7 @@ body {
   color: #333333;
 }
 
-/* TABLET/MOBILE VIEWER: Adjusts sidebar and model behavior on narrow screens. */
+
 @media (max-width: 768px) {
   body {
     flex-direction: column-reverse;

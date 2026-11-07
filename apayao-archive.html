@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- PAGE PURPOSE: Province archive page for apayao: controls artifact/value cards and uses archive.css/archive.js. -->
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
 
   <title>Apayao Archive | PASCCAH</title>
 
-  <!-- Shared styles keep the province archive pages visually consistent. -->
+
   <link rel="stylesheet" href="archive.css" />
 </head>
 
@@ -26,14 +26,14 @@
   </header>
 
   <main class="container">
-    <!-- Province title and short introduction. -->
+
     <header class="archive-header">
       <p class="eyebrow">PASCCAH · Preserve, Access, Share, Cordilleran Cultures and Heritages</p>
       <h1>Apayao Archive</h1>
       <p>Explore the artifacts and values of Apayao.</p>
     </header>
 
-    <!-- Return to the landing page with the Cordilleran map. -->
+
     <nav class="archive-navigation" aria-label="Archive navigation">
       <a href="map.html">← Back to the Cordilleran map</a>
     </nav>
@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <!-- archive.js switches panels; Artifacts is selected when the page opens. -->
+
       <div
         class="archive-tabs"
         role="tablist"
@@ -75,13 +75,13 @@
         </button>
       </div>
 
-      <!-- Artifact cards link to their 3D viewer pages or another item page. -->
+
       <section
         class="archive-panel"
         id="artifacts-panel"
         role="tabpanel"
         aria-labelledby="artifacts-tab">
-        <!-- archive.js creates the A-Z filter buttons in this empty element. -->
+
         <div
           class="alphabet-bar"
           role="group"
@@ -110,7 +110,7 @@
           </div>
         </div>
 
-        <!-- To add an artifact, copy a card and update its link, title, description, and metadata. -->
+
         <div
           class="archive-items"
           tabindex="0"
@@ -142,7 +142,7 @@
             </div>
             <div class="archive-item-content">
               <p class="archive-item-description">
-                A traditional curved-blade tool used for farming and other daily tasks. 
+                A traditional curved-blade tool used for farming and other daily tasks.
               </p>
               <div class="archive-item-meta">
                 <span>
@@ -156,14 +156,14 @@
         </div>
       </section>
 
-      <!-- Values use the same card structure, but live in their own tab panel. -->
+
       <section
         class="archive-panel"
         id="values-panel"
         role="tabpanel"
         aria-labelledby="values-tab"
         hidden>
-        <!-- archive.js creates the A-Z filter buttons in this empty element. -->
+
         <div
           class="alphabet-bar"
           role="group"
@@ -192,12 +192,12 @@
           </div>
         </div>
 
-        <!-- To add a value, copy this card and update its link, title, description, and metadata. -->
+
         <div
           class="archive-items"
           tabindex="0"
           aria-label="Values in alphabetical order">
-          
+
             </div>
           </a>
         </div>
@@ -209,7 +209,7 @@
     </footer>
   </main>
 
-  <!-- Adds category tabs, alphabetical filters, item counts, and list scrolling. -->
+
   <script src="archive.js" defer></script>
 </body>
 </html>

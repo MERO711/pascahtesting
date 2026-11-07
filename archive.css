@@ -1,22 +1,12 @@
-/*
- * ARCHIVE PAGE STYLES: all six province *-archive.html files
- * Controls archive headers, tabs, alphabet filters, artifact/value cards,
- * scrolling controls, item details, and archive mobile layouts.
- */
-
-/* SHARED ARCHIVE COLOR PALETTE: Update these variables to change site-wide archive text and accents. */
 :root {
   color-scheme: light;
-  /* COLOR GUIDE: These shared variables control archive text and gold accents.
-     Change body gradients, card gradients, borders, shadows, footer text, and button
-     gradients here or in the commented sections below; they are separate hard-coded colors. */
-  /* COLOR-EDIT: Archive reserved background value. */
+
   --bg-color: #EDE9D0;
-  /* COLOR-EDIT: Archive main text and card headings. */
+
   --text-main: #333333;
-  /* COLOR-EDIT: Archive descriptions, muted labels, and empty-state text. */
+
   --text-muted: #6F685A;
-  /* COLOR-EDIT: Gold headings, borders, tabs, buttons, and card accents. */
+
   --accent: #B86B43;
 }
 
@@ -24,13 +14,13 @@
 html { min-width: 320px; }
 body {
   min-height: 100vh;
-  /* DEFAULT SITE GRADIENT: Change the page fallback/background gradient here. */
+
   background: radial-gradient(ellipse at 50% 28%, #F5F1DE 0, #EDE9D0 58%, #DDD7BA 100%);
   color: var(--text-main);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* NAVIGATION: Shared navigation bar used above every archive page. */
+
 .site-header {
   height: 58px;
   display: flex;
@@ -39,9 +29,9 @@ body {
   padding: 0 48px;
   position: relative;
   z-index: 20;
-  /* COLOR-EDIT: Archive navigation bottom border. */
+
   border-bottom: 1px solid #B86B43;
-  /* COLOR-EDIT: Archive navigation bar background. */
+
   background: #D95F16;
 }
 
@@ -53,7 +43,7 @@ body {
   place-items: center;
   border: 2px solid var(--accent);
   border-radius: 50%;
-  /* COLOR-EDIT: Archive logo circle background. */
+
   background: #EDE9D0;
   object-fit: cover;
 }
@@ -95,13 +85,13 @@ body {
 
 body.archive-page {
   min-height: 100vh;
-  /* ARCHIVE MAIN GRADIENT: Change these stops to recolor the full archive body background. */
+
   background: linear-gradient(135deg, #F5F1DE 0%, #EDE9D0 100%);
   color: var(--text-main);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ARCHIVE PAGE LAYOUT: Changes the main content width and outer spacing. */
+
 .container {
   max-width: 1200px;
   min-height: 100vh;
@@ -109,10 +99,10 @@ body.archive-page {
   padding: 20px;
 }
 
-/* ARCHIVE HEADING: Controls each province title and subtitle area. */
+
 .archive-header {
   padding: 40px 20px;
-  /* COLOR-EDIT: Archive heading underline/bottom border. */
+
   border-bottom: 2px solid var(--accent);
   margin-bottom: 36px;
   text-align: center;
@@ -130,12 +120,12 @@ body.archive-page {
   margin: 10px 0;
   color: var(--accent);
   font-size: clamp(2rem, 5vw, 3rem);
-  /* COLOR-EDIT: Province archive title shadow. */
+
   text-shadow: 2px 2px 4px #33333355;
 }
 
 .archive-header > p:last-child {
-  /* COLOR-EDIT: Province archive subtitle text. */
+
   color: #B86B43;
   font-style: italic;
 }
@@ -160,10 +150,10 @@ body.archive-page {
 
 .archive-section {
   padding: 28px;
-  /* COLOR-EDIT: Archive section border. */
+
   border: 1px solid #B86B4366;
   border-radius: 12px;
-  /* COLOR-EDIT: Archive section panel background. */
+
   background: #F5F1DECC;
 }
 
@@ -196,7 +186,7 @@ body.archive-page {
 .archive-scroll-controls button {
   width: 42px;
   height: 42px;
-  /* COLOR-EDIT: Scroll-arrow button border and arrow text. */
+
   border: 1px solid var(--accent);
   border-radius: 50%;
   background: transparent;
@@ -206,7 +196,7 @@ body.archive-page {
 }
 
 .archive-scroll-controls button:hover {
-  /* COLOR-EDIT: Scroll-arrow hover background and text. */
+
   background: var(--accent);
   color: #333333;
 }
@@ -215,17 +205,17 @@ body.archive-page {
 .archive-tab:focus-visible,
 .alphabet-button:focus-visible,
 .archive-items:focus-visible {
-  /* COLOR-EDIT: Keyboard-focus outline on archive tabs, filters, and controls. */
+
   outline: 3px solid #333333;
   outline-offset: 3px;
 }
 
-/* ARCHIVE TABS: Controls the Artifact and Values tab row. */
+
 .archive-tabs {
   display: flex;
   gap: 8px;
   margin-top: 24px;
-  /* COLOR-EDIT: Bottom divider under Artifact/Values tabs. */
+
   border-bottom: 1px solid #B86B4366;
 }
 
@@ -242,7 +232,7 @@ body.archive-page {
 }
 
 .archive-tab[aria-selected="true"] {
-  /* COLOR-EDIT: Active tab border colors and text. */
+
   border-color: #B86B4366;
   border-bottom-color: var(--accent);
   border-radius: 6px 6px 0 0;
@@ -253,7 +243,7 @@ body.archive-page {
   padding-top: 18px;
 }
 
-/* ALPHABET FILTERS: Controls the letter-filter button row. */
+
 .alphabet-bar {
   display: flex;
   flex-wrap: wrap;
@@ -264,7 +254,7 @@ body.archive-page {
 .alphabet-button {
   min-width: 34px;
   min-height: 34px;
-  /* COLOR-EDIT: Letter-filter normal border and text background. */
+
   border: 1px solid #B86B4366;
   border-radius: 4px;
   background: #F5F1DEAA;
@@ -275,7 +265,7 @@ body.archive-page {
 }
 
 .alphabet-button[aria-pressed="true"] {
-  /* COLOR-EDIT: Selected letter-filter border, background, and text. */
+
   border-color: var(--accent);
   background: var(--accent);
   color: #333333;
@@ -283,7 +273,7 @@ body.archive-page {
 }
 
 .alphabet-button:disabled {
-  /* COLOR-EDIT: Disabled letter-filter text. */
+
   color: #9A9384;
   cursor: not-allowed;
   opacity: 0.45;
@@ -308,7 +298,7 @@ body.archive-page {
   font-weight: 400;
 }
 
-/* CARD LIST: Changes the scrollable card container and scrollbar. */
+
 .archive-items {
   display: grid;
   max-height: min(48vh, 420px);
@@ -318,7 +308,7 @@ body.archive-page {
   padding: 4px 10px 12px 4px;
   overscroll-behavior: contain;
   scroll-behavior: smooth;
-  /* COLOR-EDIT: Card-list scrollbar thumb and track. */
+
   scrollbar-color: var(--accent) #DDD7BA;
   scrollbar-width: thin;
 }
@@ -330,7 +320,7 @@ body.archive-page {
 .archive-empty {
   grid-column: 1 / -1;
   padding: 28px 20px;
-  /* COLOR-EDIT: Empty-filter dashed border and supporting text. */
+
   border: 1px dashed #B86B43;
   border-radius: 8px;
   color: var(--text-muted);
@@ -338,13 +328,13 @@ body.archive-page {
   text-align: center;
 }
 
-/* ARCHIVE CARDS: Changes the size, border, background, and card shadow of every item. */
+
 .archive-item {
   display: flex;
   min-height: 270px;
   flex-direction: column;
   overflow: hidden;
-  /* COLOR-EDIT: Archive card border and background gradient. */
+
   border: 1px solid #B86B43;
   border-radius: 8px;
   background: linear-gradient(135deg, #F5F1DE 0%, #E6E1C5 100%);
@@ -357,14 +347,14 @@ body.archive-page {
 }
 
 .archive-item-link:focus-visible {
-  /* COLOR-EDIT: Keyboard-focus outline around clickable archive cards. */
+
   outline: 3px solid #333333;
   outline-offset: 3px;
 }
 
 .archive-item:hover {
   transform: translateY(-3px);
-  /* COLOR-EDIT: Hover shadow beneath archive cards. */
+
   box-shadow: 0 8px 20px #B86B4340;
 }
 
@@ -372,10 +362,10 @@ body.archive-page {
   color: inherit;
 }
 
-/* CARD HEADER: Controls the gold title strip containing each item name. */
+
 .archive-item-header {
   padding: 18px 20px;
-  /* COLOR-EDIT: Gold title strip gradient and dark title text. */
+
   background: linear-gradient(135deg, #B86B43 0%, #D95F16 100%);
   color: #F5F1DE;
 }
@@ -399,7 +389,7 @@ body.archive-page {
 
 .archive-item-description {
   margin-bottom: 15px;
-  /* COLOR-EDIT: Archive-card description text. */
+
   color: #6F685A;
   font-size: 0.95rem;
   line-height: 1.6;
@@ -407,7 +397,7 @@ body.archive-page {
 
 .archive-item-meta {
   margin-bottom: 18px;
-  /* COLOR-EDIT: Archive-card metadata text. */
+
   color: #6F685A;
   font-size: 0.85rem;
 }
@@ -417,14 +407,14 @@ body.archive-page {
   margin: 0 12px 5px 0;
 }
 
-/* CARD ACTION BUTTON: Changes the View in 3D button appearance. */
+
 .view-button {
   display: inline-block;
   align-self: flex-start;
   margin-top: auto;
   padding: 10px 20px;
   border-radius: 4px;
-  /* COLOR-EDIT: "View in 3D" normal button gradient and text. */
+
   background: linear-gradient(135deg, #B86B43 0%, #D95F16 100%);
   color: #F5F1DE;
   font-weight: 700;
@@ -434,27 +424,27 @@ body.archive-page {
 
 .archive-item-link:focus-visible .view-button,
 .archive-item-link:hover .view-button {
-  /* COLOR-EDIT: "View in 3D" hover/focus gradient. */
+
   background: linear-gradient(135deg, #D95F16 0%, #B86B43 100%);
 }
 
 .view-button:hover {
   transform: scale(1.03);
-  /* COLOR-EDIT: Direct "View in 3D" hover gradient. */
+
   background: linear-gradient(135deg, #D95F16 0%, #B86B43 100%);
 }
 
 footer {
   margin-top: 36px;
   padding: 24px;
-  /* COLOR-EDIT: Archive footer top border. */
+
   border-top: 1px solid #B86B43;
-  /* COLOR-EDIT: Archive footer text. */
+
   color: #6F685A;
   text-align: center;
 }
 
-/* MOBILE ARCHIVE: Adjusts archive cards and layout for phones. */
+
 @media (max-width: 700px) {
   .archive-section {
     padding: 20px 16px;

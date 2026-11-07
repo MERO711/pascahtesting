@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- PAGE PURPOSE: 3D artifact viewer page: edit page content here and model behavior in viewer.css/viewer.js. -->
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,11 +9,11 @@
 </head>
 <body>
 
-  <!-- Scrollable Info Sidebar -->
+
   <aside class="info-sidebar">
     <a href="index.html" class="back-link">← Back to Archive</a>
     <h1>Container, Quimbaya culture</h1>
-    
+
     <div class="meta-item">
       By <a href="https://sketchfab.com/GlobalDigitalHeritage" target="_blank" rel="noopener">Global Digital Heritage and GDH-Afrika</a>
     </div>
@@ -34,7 +34,7 @@
         • <strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.<br />
         • <strong>Explore:</strong> Select the numbered points on the artifact.<br />
 
-        <!-- Add a QR Code for this section -->
+
         • <strong>View in AR:</strong> Select “View in your space” on a supported mobile device.
       </p>
       <p class="model-credit">
@@ -45,7 +45,7 @@
     </div>
   </aside>
 
-  <!-- Interactive 3D Model Area -->
+
   <main class="viewer-container" id="viewer-container">
     <model-viewer
       id="artifact-viewer"
@@ -76,7 +76,7 @@
     <button class="fullscreen-btn" id="fullscreen-btn">Toggle Fullscreen</button>
   </main>
 
-  <!-- Google's model-viewer supports browser-based 3D and device AR modes. -->
+
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
   <script type="module" src="viewer.js"></script>
 </body>
