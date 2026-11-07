@@ -27,6 +27,7 @@ body {
   background: radial-gradient(ellipse at 50% 28%, #F5F1DE 0, #EDE9D0 58%, #DDD7BA 100%);
   color: var(--text-main);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
 }
 
 /* NAVIGATION: Editing these rules changes the top bar and logo on the home page. */
