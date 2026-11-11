@@ -2,10 +2,10 @@ import { getSupabaseClient } from './supabase-client.js';
 
 const nameElement = document.getElementById('artifact-name');
 const metaElement = document.getElementById('artifact-meta');
-const descriptionElement = document.getElementById('artifact-description');
 const detailsElement = document.getElementById('artifact-details');
 const statusElement = document.getElementById('artifact-status');
 const backLink = document.getElementById('archive-back-link');
+const animationButton = document.getElementById('animation-btn');
 const viewer = document.getElementById('artifact-viewer');
 const audio = document.getElementById('artifact-audio');
 
@@ -105,7 +105,7 @@ async function loadArtifact() {
     const supabase = await getSupabaseClient();
     const { data: artifact, error } = await supabase
       .from('artifacts')
-      .select('slug, name, province, category, subtitle, description, model_path, audio_path, archive_path, details, hotspots, animation_name, autoplay, loop')
+      .select('slug, name, province, category, subtitle, model_path, audio_path, archive_path, details, hotspots, animation_name, autoplay, loop')
       .eq('slug', slug)
       .maybeSingle();
 
@@ -121,10 +121,13 @@ async function loadArtifact() {
     nameElement.textContent = artifact.name;
     document.title = `${artifact.name} | PASCCAH`;
     metaElement.textContent = `${artifact.subtitle} · ${artifact.province} · ${artifact.category}`;
-    descriptionElement.textContent = artifact.description;
     renderDetails(artifact.details);
     backLink.href = artifact.archive_path || 'map.html';
     viewer.alt = `Three-dimensional model of ${artifact.name}`;
+    viewer.dataset.category = artifact.category;
+    animationButton.hidden = artifact.category !== 'Value';
+    animationButton.disabled = true;
+    animationButton.textContent = artifact.category === 'Value' ? 'No animation available' : '';
     if (artifact.animation_name) {
       viewer.setAttribute('animation-name', artifact.animation_name);
     }
@@ -135,11 +138,11 @@ async function loadArtifact() {
       viewer.setAttribute('loop', '');
     }
     viewer.src = new URL(artifact.model_path, document.baseURI).href;
+    viewer.dispatchEvent(new Event('artifact-configured'));
 
     if (artifact.audio_path) {
       audio.src = new URL(artifact.audio_path, document.baseURI).href;
       audio.setAttribute('aria-label', `${artifact.name} audio`);
-      audio.hidden = false;
     }
 
     renderHotspots(artifact.hotspots);

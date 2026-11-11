@@ -51,15 +51,23 @@ viewer.addEventListener('click', (event) => {
 function handleViewerLoad() {
   loadingMessage.hidden = true;
   if (animationBtn) {
+    const isValue = viewer.dataset.category === 'Value';
     const hasAnimation = viewer.availableAnimations.length > 0;
+    animationBtn.hidden = !isValue;
     animationBtn.disabled = !hasAnimation;
-    animationBtn.textContent = hasAnimation ? 'Pause animation' : 'No animation available';
-    animationBtn.setAttribute('aria-pressed', String(hasAnimation));
+    if (isValue) {
+      const isPlaying = hasAnimation && viewer.hasAttribute('autoplay');
+      animationBtn.textContent = hasAnimation
+        ? (isPlaying ? 'Pause animation' : 'Play animation')
+        : 'No animation available';
+      animationBtn.setAttribute('aria-pressed', String(isPlaying));
+    }
   }
 }
 
 
 viewer.addEventListener('load', handleViewerLoad);
+viewer.addEventListener('artifact-configured', handleViewerLoad);
 if (viewer.loaded) {
   handleViewerLoad();
 }
@@ -69,7 +77,10 @@ viewer.addEventListener('error', () => {
   loadingMessage.textContent = 'The 3D artifact could not be loaded.';
   if (animationBtn) {
     animationBtn.disabled = true;
-    animationBtn.textContent = 'Animation unavailable';
+    animationBtn.hidden = viewer.dataset.category !== 'Value';
+    if (!animationBtn.hidden) {
+      animationBtn.textContent = 'Animation unavailable';
+    }
   }
 });
 

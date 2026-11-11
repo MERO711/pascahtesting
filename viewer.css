@@ -78,6 +78,30 @@ body {
   margin-bottom: 1.2rem;
 }
 
+.viewer-instructions {
+  margin-bottom: 1.5rem;
+  border: 1px solid #B86B4366;
+  border-radius: 0.5rem;
+  padding: 0.85rem 1rem;
+  background: #EDE9D0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.viewer-instructions h2 {
+  margin-bottom: 0.45rem;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.viewer-instructions ul {
+  padding-left: 1.15rem;
+}
+
+.viewer-instructions li + li {
+  margin-top: 0.2rem;
+}
+
 .model-credit {
   padding-top: 0.8rem;
 

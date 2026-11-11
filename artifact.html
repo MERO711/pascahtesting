@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Explore a Cordilleran cultural artifact in 3D." />
   <title>Artifact | PASCCAH</title>
-  <link rel="stylesheet" href="viewer.css" />
+  <link rel="stylesheet" href="viewer.css?v=3" />
 </head>
 
 <body>
@@ -14,11 +14,19 @@
     <a href="map.html" class="back-link" id="archive-back-link">← Back to the archive</a>
     <h1 id="artifact-name">Loading artifact…</h1>
     <div class="meta-item" id="artifact-meta"></div>
+    <section class="viewer-instructions" aria-labelledby="viewer-instructions-title">
+      <h2 id="viewer-instructions-title">Interactive Viewer Controls</h2>
+      <ul>
+        <li><strong>Rotate:</strong> Drag with the left mouse button or a finger.</li>
+        <li><strong>Move camera:</strong> Drag with the right mouse button or two fingers.</li>
+        <li><strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.</li>
+        <li><strong>Hotspots:</strong> Select the numbered points on the artifact.</li>
+        <li><strong>View in AR:</strong> Select the button; available only on mobile devices.</li>
+      </ul>
+    </section>
     <div class="content-section">
-      <p id="artifact-description"></p>
       <div id="artifact-details"></div>
       <p id="artifact-status" role="status" aria-live="polite">Loading artifact details…</p>
-      <audio id="artifact-audio" controls hidden></audio>
     </div>
   </aside>
 
@@ -40,12 +48,13 @@
       <button class="ar-button" slot="ar-button">View in AR</button>
       <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
     </model-viewer>
-    <button class="animation-btn" id="animation-btn" type="button" disabled>No animation available</button>
+    <button class="animation-btn" id="animation-btn" type="button" disabled hidden></button>
     <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+    <audio id="artifact-audio" hidden></audio>
   </main>
 
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
-  <script type="module" src="artifact-page.js"></script>
-  <script type="module" src="viewer.js"></script>
+  <script type="module" src="artifact-page.js?v=5"></script>
+  <script type="module" src="viewer.js?v=5"></script>
 </body>
 </html>
