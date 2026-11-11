@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore a Cordilleran cultural artifact in 3D." />
+  <title>Artifact | PASCCAH</title>
+  <link rel="stylesheet" href="viewer.css" />
+</head>
+
+<body>
+  <aside class="info-sidebar">
+    <a href="map.html" class="back-link" id="archive-back-link">← Back to the archive</a>
+    <h1 id="artifact-name">Loading artifact…</h1>
+    <div class="meta-item" id="artifact-meta"></div>
+    <div class="content-section">
+      <p id="artifact-description"></p>
+      <p id="artifact-status" role="status" aria-live="polite">Loading artifact details…</p>
+      <audio id="artifact-audio" controls hidden></audio>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+    <model-viewer
+      id="artifact-viewer"
+      alt="Three-dimensional artifact model"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager"
+      hidden>
+      <button class="ar-button" slot="ar-button">View in AR</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="animation-btn" id="animation-btn" type="button" disabled>No animation available</button>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="artifact-page.js"></script>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>
