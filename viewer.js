@@ -16,29 +16,35 @@ arButton?.addEventListener('click', () => {
 });
 
 
-viewer.querySelectorAll('.model-hotspot').forEach((hotspot) => {
-  hotspot.setAttribute('aria-expanded', 'false');
-  hotspot.addEventListener('click', () => {
-    const isExpanded = !hotspot.classList.contains('is-expanded');
-    viewer.querySelectorAll('.model-hotspot').forEach((otherHotspot) => {
-      otherHotspot.classList.remove('is-expanded');
-      otherHotspot.setAttribute('aria-expanded', 'false');
-    });
+viewer.addEventListener('click', (event) => {
+  if (!(event.target instanceof Element)) {
+    return;
+  }
 
-    hotspot.classList.toggle('is-expanded', isExpanded);
-    hotspot.setAttribute('aria-expanded', String(isExpanded));
+  const hotspot = event.target.closest('.model-hotspot');
+  if (!hotspot || !viewer.contains(hotspot)) {
+    return;
+  }
 
-    const audioId = hotspot.dataset.audio;
-    if (audioId && isExpanded) {
-      const audio = document.getElementById(audioId);
-      if (audio) {
-        audio.currentTime = 0;
-        audio.play().catch((error) => {
-          console.error('Unable to play hotspot audio:', error);
-        });
-      }
-    }
+  const isExpanded = !hotspot.classList.contains('is-expanded');
+  viewer.querySelectorAll('.model-hotspot').forEach((otherHotspot) => {
+    otherHotspot.classList.remove('is-expanded');
+    otherHotspot.setAttribute('aria-expanded', 'false');
   });
+
+  hotspot.classList.toggle('is-expanded', isExpanded);
+  hotspot.setAttribute('aria-expanded', String(isExpanded));
+
+  const audioId = hotspot.dataset.audio;
+  if (audioId && isExpanded) {
+    const audio = document.getElementById(audioId);
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play().catch((error) => {
+        console.error('Unable to play hotspot audio:', error);
+      });
+    }
+  }
 });
 
 

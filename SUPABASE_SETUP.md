@@ -4,9 +4,11 @@ The site remains static HTML and JavaScript. The shared client uses the
 Supabase JavaScript SDK from a CDN, so no build step or package install is
 needed. Artifact archive links now open the shared `artifact.html?id=<slug>`
 viewer instead of requiring a separate viewer page per item. The old individual
-pages are retained and can still be opened directly. Province archive lists are
-loaded from Supabase; their existing HTML entries remain visible as a fallback
-if the database is unavailable.
+page URLs redirect to the shared viewer. The viewer fetches artifact descriptions,
+purpose/material details, model and audio paths, animation settings, and hotspot
+positions/content from Supabase. Province archive lists are also loaded from
+Supabase; their existing HTML entries remain visible as a fallback if the
+database is unavailable.
 
 ## Configure Supabase
 
@@ -21,10 +23,12 @@ if the database is unavailable.
    ```
 
 4. Open the Supabase **SQL Editor**, paste in `supabase-setup.sql`, and run it.
-   The script creates the `artifacts` table, enables row-level security, grants
-   public read-only access through an RLS policy, and seeds the 13 artifacts and
-   values currently listed in the province archives. It can be run again to
-   update those records.
+   The script creates or updates the `artifacts` table, enables row-level
+   security, grants public read-only access through an RLS policy, and seeds
+   all 13 archive entries and their viewer details and hotspots. It is
+   idempotent and can be run again to update those records. If you already ran
+   an earlier version of this setup, run the updated script again to add the
+   viewer-detail and hotspot columns.
 5. Serve the site over HTTP or HTTPS, such as with GitHub Pages or a local
    development server. ES modules do not work reliably from a `file://` URL.
 
