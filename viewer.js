@@ -1,19 +1,6 @@
 const viewer = document.getElementById('artifact-viewer');
 const fullscreenBtn = document.getElementById('fullscreen-btn');
 const loadingMessage = viewer.querySelector('.model-loading');
-const animationBtn = document.getElementById('animation-btn');
-const arButton = viewer.querySelector('.ar-button');
-
-
-arButton?.addEventListener('click', () => {
-  if (viewer.availableAnimations.length > 0) {
-    viewer.play();
-    if (animationBtn) {
-      animationBtn.setAttribute('aria-pressed', 'true');
-      animationBtn.textContent = 'Pause animation';
-    }
-  }
-});
 
 
 viewer.querySelectorAll('.model-hotspot').forEach((hotspot) => {
@@ -44,12 +31,6 @@ viewer.querySelectorAll('.model-hotspot').forEach((hotspot) => {
 
 function handleViewerLoad() {
   loadingMessage.hidden = true;
-  if (animationBtn) {
-    const hasAnimation = viewer.availableAnimations.length > 0;
-    animationBtn.disabled = !hasAnimation;
-    animationBtn.textContent = hasAnimation ? 'Pause animation' : 'No animation available';
-    animationBtn.setAttribute('aria-pressed', String(hasAnimation));
-  }
 }
 
 
@@ -61,22 +42,6 @@ if (viewer.loaded) {
 
 viewer.addEventListener('error', () => {
   loadingMessage.textContent = 'The 3D artifact could not be loaded.';
-  if (animationBtn) {
-    animationBtn.disabled = true;
-    animationBtn.textContent = 'Animation unavailable';
-  }
-});
-
-
-animationBtn?.addEventListener('click', () => {
-  const isPlaying = animationBtn.getAttribute('aria-pressed') === 'true';
-  if (isPlaying) {
-    viewer.pause();
-  } else {
-    viewer.play();
-  }
-  animationBtn.setAttribute('aria-pressed', String(!isPlaying));
-  animationBtn.textContent = isPlaying ? 'Play animation' : 'Pause animation';
 });
 
 
