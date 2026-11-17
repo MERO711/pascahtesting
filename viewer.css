@@ -72,6 +72,7 @@ body {
 .content-section {
   font-size: 0.95rem;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .content-section p {
