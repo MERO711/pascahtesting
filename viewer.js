@@ -1,16 +1,10 @@
-/*
- * 3D ARTIFACT VIEWER LOGIC: viewer.js
- * Used by artifact pages that contain a <model-viewer>. Controls loading,
- * hotspots, animation playback, AR playback, and fullscreen mode.
- * Selector or element-ID changes here require matching updates in the HTML.
- */
 const viewer = document.getElementById('artifact-viewer');
 const fullscreenBtn = document.getElementById('fullscreen-btn');
 const loadingMessage = viewer.querySelector('.model-loading');
 const animationBtn = document.getElementById('animation-btn');
 const arButton = viewer.querySelector('.ar-button');
 
-// Start an available animation when the viewer's AR button is used.
+
 arButton?.addEventListener('click', () => {
   if (viewer.availableAnimations.length > 0) {
     viewer.play();
@@ -21,7 +15,7 @@ arButton?.addEventListener('click', () => {
   }
 });
 
-// Keep model callouts mutually exclusive and expose their state to assistive tech.
+
 viewer.querySelectorAll('.model-hotspot').forEach((hotspot) => {
   hotspot.setAttribute('aria-expanded', 'false');
   hotspot.addEventListener('click', () => {
@@ -47,7 +41,7 @@ viewer.querySelectorAll('.model-hotspot').forEach((hotspot) => {
   });
 });
 
-// Hide the loading message and configure animation controls once the model is ready.
+
 function handleViewerLoad() {
   loadingMessage.hidden = true;
   if (animationBtn) {
@@ -58,13 +52,13 @@ function handleViewerLoad() {
   }
 }
 
-// The model may finish loading before or after this script runs.
+
 viewer.addEventListener('load', handleViewerLoad);
 if (viewer.loaded) {
   handleViewerLoad();
 }
 
-// Show an explicit error state instead of leaving the loading message indefinitely.
+
 viewer.addEventListener('error', () => {
   loadingMessage.textContent = 'The 3D artifact could not be loaded.';
   if (animationBtn) {
@@ -73,7 +67,7 @@ viewer.addEventListener('error', () => {
   }
 });
 
-// Toggle playback only when this model includes an animation.
+
 animationBtn?.addEventListener('click', () => {
   const isPlaying = animationBtn.getAttribute('aria-pressed') === 'true';
   if (isPlaying) {
@@ -85,7 +79,7 @@ animationBtn?.addEventListener('click', () => {
   animationBtn.textContent = isPlaying ? 'Play animation' : 'Pause animation';
 });
 
-// Use the viewer container so the sidebar and model enter fullscreen together.
+
 fullscreenBtn.addEventListener('click', async () => {
   try {
     if (!document.fullscreenElement) {

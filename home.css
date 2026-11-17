@@ -1,21 +1,12 @@
-/*
- * HOME PAGE STYLES: index.html
- * Changes to colors, fonts, nav bars, hero text, and layout affect this page.
- * The :root values define the warm cream, charcoal, and copper palette used by the website.
- */
-
 :root {
   color-scheme: light;
-  /* COLOR GUIDE: Change --bg-color, --text-main, --text-muted, and --accent here for
-     the home page's shared background, text, muted text, gold, and button colors.
-     Gradients and hover colors below also contain separate hard-coded values. */
-  /* COLOR-EDIT: Home page reserved background value. */
+
   --bg-color: #EDE9D0;
-  /* COLOR-EDIT: Main heading/body text. */
+
   --text-main: #333333;
-  /* COLOR-EDIT: Secondary description text. */
+
   --text-muted: #6F685A;
-  /* COLOR-EDIT: Gold accent, button fill, links, navigation hover, and headings. */
+
   --accent: #B86B43;
 }
 
@@ -23,13 +14,13 @@
 html { min-width: 320px; }
 body {
   min-height: 100vh;
-  /* COLOR-EDIT: Main page gradient. Replace the three displayed hex values. */
+
   background: radial-gradient(ellipse at 50% 28%, #F5F1DE 0, #EDE9D0 58%, #DDD7BA 100%);
   color: var(--text-main);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* NAVIGATION: Editing these rules changes the top bar and logo on the home page. */
+
 .site-header {
   height: 58px;
   display: flex;
@@ -38,9 +29,9 @@ body {
   padding: 0 48px;
   position: relative;
   z-index: 20;
-  /* COLOR-EDIT: Navigation bottom border. */
+
   border-bottom: 1px solid #B86B43;
-  /* COLOR-EDIT: Navigation bar background. */
+
   background: #D95F16;
 }
 
@@ -52,12 +43,12 @@ body {
   place-items: center;
   border: 2px solid var(--accent);
   border-radius: 50%;
-  /* COLOR-EDIT: Logo circle background. */
+
   background: #EDE9D0;
   object-fit: cover;
 }
 .team-name { color: #333333; font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; }
-/* COLOR-EDIT: Navigation link text uses --text-main; number symbols and active/hover links use --accent. */
+
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav a {
   color: var(--text-main);
@@ -73,13 +64,13 @@ body {
 .main-nav a.active { color: #333333; }
 .main-nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
-/* TABLET LAYOUT: Adjusts the home page for medium screens. */
+
 @media (max-width: 900px) {
   .site-header { padding: 0 20px; }
   .main-nav { gap: 14px; }
 }
 
-/* MOBILE LAYOUT: Adjusts the home page for phones. */
+
 @media (max-width: 680px) {
   .site-header { height: auto; min-height: 58px; padding: 8px 14px; }
   .team-name { display: none; }
@@ -88,15 +79,15 @@ body {
   .main-nav a { font-size: 0.72rem; }
 }
 
-/* HOME PAGE BODY: Changing this section changes the home-page background. */
+
 .home-page {
-  /* COLOR-EDIT: Home page content/background gradient. */
+
   background: radial-gradient(ellipse at 50% 35%, #F5F1DE 0, #EDE9D0 58%, #DDD7BA 100%);
   overflow-x: hidden;
 }
 
 .home-main { min-height: calc(100vh - 58px); display: grid; }
-/* HERO LAYOUT: Changes here position the heading, tagline, button, and map image. */
+
 .hero-content {
   min-height: calc(100vh - 58px);
   display: grid;
@@ -106,15 +97,15 @@ body {
 }
 .hero-copy h1 {
   margin-bottom: 4px;
-  /* COLOR-EDIT: Main hero title text. */
+
   color: var(--accent);
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1;
-  /* COLOR-EDIT: Shadow beneath the main hero heading. */
+
   text-shadow: 2px 2px 4px #33333355;
 }
 .hero-tagline { margin-top: 10px; color: var(--text-main); font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.25; }
-/* COLOR-EDIT: Hero description text. */
+
 .hero-description {
   max-width: 590px;
   margin: 34px 0 22px;
@@ -129,16 +120,16 @@ body {
   place-items: center;
   border: 1px solid var(--accent);
   border-radius: 999px;
-  /* COLOR-EDIT: Explore-button background; text color is the next declaration. */
+
   background: var(--accent);
-  /* COLOR-EDIT: Explore-button label text. */
+
   color: #333333;
   font-size: 0.82rem;
   font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
 }
-/* COLOR-EDIT: Explore-button hover/focus background. */
+
 .explore-button:hover,
 .explore-button:focus-visible { background: #D95F16; }
 .hero-map { position: relative; width: 100%; max-width: 650px; justify-self: center; }
@@ -147,7 +138,7 @@ body {
   max-height: calc(100vh - 110px);
   display: block;
   object-fit: contain;
-  /* COLOR-EDIT: Shadow cast by the Cordillera map image. */
+
   filter: drop-shadow(9px 14px 14px #33333355);
 }
 

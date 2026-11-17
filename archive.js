@@ -1,10 +1,3 @@
-/*
- * ARCHIVE PAGE LOGIC: archive.js
- * Used by every province archive page. This script creates alphabet filters,
- * opens Artifacts/Values tabs, updates item counts, and scrolls card lists.
- * Editing selectors in archive.css must match the class names used below.
- */
-// Build alphabet filters and item counts for each category panel.
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
 const panels = Array.from(document.querySelectorAll('.archive-panel'));
@@ -46,7 +39,7 @@ panels.forEach((panel) => {
   });
 });
 
-// Keep tab selection and panel visibility in sync.
+
 function selectTab(selectedTab) {
   tabs.forEach((tab) => {
     const selected = tab === selectedTab;
@@ -56,7 +49,7 @@ function selectTab(selectedTab) {
   });
 }
 
-// Let keyboard users move between tabs with the left and right arrow keys.
+
 tabs.forEach((tab, index) => {
   tab.addEventListener('click', () => selectTab(tab));
   tab.addEventListener('keydown', (event) => {
@@ -70,7 +63,7 @@ tabs.forEach((tab, index) => {
   });
 });
 
-// Scroll the active category list by most of its visible height.
+
 document.querySelectorAll('[data-scroll]').forEach((button) => {
   button.addEventListener('click', () => {
     const panel = button.closest('.archive-panel');

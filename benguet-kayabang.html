@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- PAGE PURPOSE: 3D artifact viewer page for benguet: uses viewer.css/viewer.js and a model-viewer element. -->
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
     <h1>Kayabang</h1>
     <div class="meta-item">Traditional Basket</div>
     <div class="content-section">
-      <!-- Edit these paragraphs to add verified model details, context, and attribution. -->
+
       <p>
         <strong>Interactive Viewer Controls:</strong><br />
         • <strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.<br />
@@ -21,7 +21,7 @@
         • <strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.<br />
         • <strong>Hotspots:</strong> Select the numbered points on the artifact.<br />
 
-        <!-- Add a QR Code for this section -->
+
         • <strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).
       </p>
 
@@ -34,7 +34,7 @@
       </p>
 
       <br>
-      
+
       <p>
         <strong>References</strong>:
       </p>
@@ -45,7 +45,7 @@
   </aside>
 
   <main class="viewer-container" id="viewer-container">
-    <!-- Update src and alt when replacing the GLB; keep ar and ar-modes for AR support. -->
+
     <model-viewer
       id="artifact-viewer"
       src="3D%20ASSETS/benguet-kayabang.glb"
@@ -75,7 +75,7 @@
     <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
   </main>
 
-  <!-- model-viewer provides the 3D/AR component; viewer.js handles loading and fullscreen behavior. -->
+
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
   <script type="module" src="viewer.js"></script>
 </body>
