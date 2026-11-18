@@ -38,6 +38,25 @@ body {
   border-right: 1px solid #B86B4366;
 
   background: var(--card-bg);
+  scrollbar-color: var(--accent) var(--bg-color);
+  scrollbar-width: thin;
+}
+
+.info-sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.info-sidebar::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+.info-sidebar::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 4px;
+}
+
+.info-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-muted);
 }
 
 .back-link {
