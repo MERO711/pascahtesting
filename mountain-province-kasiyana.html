@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasiyana | PASCCAH</title>
+  <link rel="stylesheet" href="viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="kalinga-archive.html" class="back-link">← Back to Kalinga Archive</a>
+    <h1>Kasiyana</h1>
+    <div class="meta-item">Traditional Kankanaey Expression</div>
+    <div class="content-section">
+
+      <p>
+        <strong>Interactive Viewer Controls:</strong><br />
+        • <strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.<br />
+        • <strong>Move Camera:</strong> Drag with your mouse (<i>Right Click</i>) or two fingers.<br />
+        • <strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.<br />
+        • <strong>Hotspots:</strong> Select the numbered points on the artifact.<br />
+
+
+        • <strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).
+      </p>
+
+      <br>
+      <p>
+        <strong>Cultural and Moral Significance:</strong> Reflects the importance of remaining hopeful during difficult situations, such as poor harvests, personal struggles, or loss. It encourages individuals to acknowledge their problems while maintaining a positive outlook toward the future.
+      </p>
+      <p>
+        <strong>Representation and Meaning:</strong> Represents the Kankanaey attitude of acknowledging grief, hardships, and challenges while maintaining hope for better outcomes. It emphasizes resilience, perseverance, and the belief that difficulties can be overcome with patience and determination.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>References</strong>:
+      </p>
+      <p>
+        ASIAN RESEARCH CENTER FOR RELIGION AND SOCIAL COMMUNICATION. (n.d.). Kasiyana as Religious Communication among the Kankanaeys in the Philippines. https://asianresearchcenter.org/blog/articles/kasiyana-as-religious-communication-among-the-kankanaeys-in-the-philippines
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+
+    <model-viewer
+      id="artifact-viewer"
+      src="3D%20ASSETS/mt.province-kasiyana.glb"
+      alt="3D model of Kasiyana"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="model-hotspot" slot="hotspot-farmer" data-position="-0.2 0.25 -0.7" data-normal="0 1 0" aria-label="The Farmer – Hope and Perseverance detail">
+        <span class="hotspot-number">1</span><span class="hotspot-label"><strong>The Farmer – Hope and Perseverance</strong> — Represents the strength to remain hopeful despite hardships. The farmer's expression reflects the Kankanaey attitude of accepting difficulties while believing that better days will come.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-basket" data-position="0.65 -0.6 -0.2" data-normal="1 1 1" aria-label="The Basket – Hardship and Disappointment detail">
+        <span class="hotspot-number">2</span><span class="hotspot-label"><strong>The Basket – Hardship and Disappointment</strong> — The nearly empty woven basket symbolizes the challenges and disappointments people experience, such as a poor harvest despite their hard work.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-harvest" data-position="-0.55 -0.45 -0.35" data-normal="0 1 1" aria-label="The Crops – Hope for a Better Future detail">
+        <span class="hotspot-number">3</span><span class="hotspot-label"><strong>The Crops – Hope for a Better Future</strong> — Represents the possibility of growth and improvement. Despite the poor harvest, the remaining crops symbolize hope and the determination to continue working toward better outcomes.</span>
+      </button>
+      <button class="ar-button" slot="ar-button">View in AR</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>
