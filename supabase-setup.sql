@@ -45,6 +45,8 @@ create policy "Public can read artifacts"
   to anon, authenticated
   using (true);
 
+-- Add one row per catalog item here. Keep this seed list in sync with the
+-- Supabase artifacts table when the setup script should reproduce the catalog.
 insert into public.artifacts
   (slug, name, province, category, subtitle, description, model_path, audio_path, archive_path)
 values
@@ -98,6 +100,8 @@ on conflict (slug) do update set
   archive_path = excluded.archive_path,
   updated_at = now();
 
+-- Add one matching UPDATE block per item below for its viewer details and
+-- hotspots. Add animation settings in a separate UPDATE block when applicable.
 update public.artifacts set
   details = $json$[
     {"heading":"Purpose","text":"Used by the Tinguian (Itneg) people to carry seeds, harvested crops, tools, and other supplies across rugged mountain trails. Its sturdy structure helps protect the contents during transport."},
