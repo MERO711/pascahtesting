@@ -103,6 +103,7 @@ async function loadArtifact() {
 
   try {
     const supabase = await getSupabaseClient();
+    // Fetch the selected artifact, including its details and hotspot data.
     const { data: artifact, error } = await supabase
       .from('artifacts')
       .select('slug, name, province, category, subtitle, model_path, audio_path, archive_path, details, hotspots, animation_name, autoplay, loop')
@@ -121,6 +122,7 @@ async function loadArtifact() {
     nameElement.textContent = artifact.name;
     document.title = `${artifact.name} | PASCCAH`;
     metaElement.textContent = `${artifact.subtitle} · ${artifact.province} · ${artifact.category}`;
+    // Render the Supabase details JSON in the artifact information sidebar.
     renderDetails(artifact.details);
     backLink.href = artifact.archive_path || 'map.html';
     viewer.alt = `Three-dimensional model of ${artifact.name}`;
@@ -145,6 +147,7 @@ async function loadArtifact() {
       audio.setAttribute('aria-label', `${artifact.name} audio`);
     }
 
+    // Turn the Supabase hotspot data into interactive buttons on the 3D model.
     renderHotspots(artifact.hotspots);
     viewer.hidden = false;
     statusElement.hidden = true;
