@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tungali | PASCCAH</title>
+  <link rel="stylesheet" href="../viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="../Archives/apayao-archive.html" class="back-link">← Back to Apayao Archive</a>
+    <h1>Tungali</h1>
+    <div class="meta-item">Traditional Bamboo Flute</div>
+    <div class="content-section">
+
+      <section class="viewer-instructions">
+        <h2>Interactive Viewer Controls</h2>
+          <ul>
+            <li><strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).</li>
+            <li><strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.</li>
+            <li><strong>Move Camera:</strong> Drag with your mouse (<i>Right Click</i>) or two fingers.</li>
+            <li><strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.</li>
+            <li><strong>Hotspots:</strong> Select the numbered points on the artifact.</li>
+          </ul>
+      </section>
+
+      <br>
+
+      <p>
+        <strong>Purpose:</strong> A traditional bamboo musical instrument used to produce melodies during cultural activities and musical performances.
+      </p>
+      <p>
+        <strong>Materials Used:</strong> Generally made from bamboo shaped into a narrow flute with openings that allow the player to produce different musical tones.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>References</strong>:
+      </p>
+      <p>
+        Rica, & Rica. (2023, January 31). Amazing Philippine Indigenous bamboo musical instruments – Bamboo Music 101 - Bamboo Bootcamp. Bamboo Bootcamp -. https://bamboobootcamp.org/bamboo-musical-instruments/
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+
+    <model-viewer
+      id="artifact-viewer"
+      src="../3D%20ASSETS/apayao-tungali.glb"
+      alt="3D model of Tungali"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="model-hotspot" slot="hotspot-beads" data-position="-0.93 0.035 0" data-normal="0 1 0" aria-label="Blowing End (Mouthpiece) detail">
+        <span class="hotspot-number">1</span><span class="hotspot-label"><strong>Blowing End (Mouthpiece)</strong> — The Tungali features a blowing end where the player directs air into the instrument to produce sound. The airflow creates vibrations inside the bamboo tube, generating musical tones.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-patterns" data-position="-0.5 0.035 0" data-normal="0 0 1" aria-label="Finger Holes detail">
+        <span class="hotspot-number">2</span><span class="hotspot-label"><strong>Finger Holes</strong> — The finger holes allow the player to change musical notes by covering or uncovering them. Different finger positions produce different pitches and melodies.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-threads" data-position="0.8 0.035 0" data-normal="0 1 0" aria-label="Bamboo Body detail">
+        <span class="hotspot-number">3</span><span class="hotspot-label"><strong>Bamboo Body</strong> — The Tungali is traditionally crafted from bamboo, a lightweight and naturally hollow material. Its tubular structure allows sound to resonate, producing the flute's distinctive musical tones.</span>
+      </button>
+      <button class="ar-button" slot="ar-button">View in AR</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="../viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sinawit | PASCCAH</title>
+  <link rel="stylesheet" href="../viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="../Archives/kalinga-archive.html" class="back-link">← Back to Kalinga Archive</a>
+    <h1>Sinawit</h1>
+    <div class="meta-item">Traditional Head Axe</div>
+    <div class="content-section">
+
+      <section class="viewer-instructions">
+        <h2>Interactive Viewer Controls</h2>
+          <ul>
+            <li><strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).</li>
+            <li><strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.</li>
+            <li><strong>Move Camera:</strong> Drag with your mouse (<i>Right Click</i>) or two fingers.</li>
+            <li><strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.</li>
+            <li><strong>Hotspots:</strong> Select the numbered points on the artifact.</li>
+          </ul>
+      </section>
+
+      <br>
+      <p>
+        <strong>Purpose:</strong> A traditional head axe historically associated with Cordilleran warriors. It was used as a weapon and is connected to traditional warrior practices and historical conflicts.
+      </p>
+      <p>
+        <strong>Materials Used:</strong> Features a curved blade made from forged steel or iron, sometimes using recycled metal. The blade has a distinctive rear spike and is attached to a hardwood handle, with metal bands reinforcing the connection.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>References</strong>:
+      </p>
+      <p>
+        Head Axe Sinawit - IFICAH Virtueller Rundgang. (2021, March 10). IFICAH Virtueller Rundgang. https://ificah-vr.de/exhibition-you-can-leave-your-head-on/philippines/philippines-room-view-1/head-axe-sinawit/?lang=en
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+
+    <model-viewer
+      id="artifact-viewer"
+      src="../3D%20ASSETS/kalinga-sinawit.glb"
+      alt="3D model of Sinawit"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="model-hotspot" slot="hotspot-blade" data-position="-0.2 0.75 0" data-normal="0 1 0" aria-label="Curved Steel Blade detail">
+        <span class="hotspot-number">1</span><span class="hotspot-label"><strong>Curved Steel Blade</strong> — The Sinawit features a curved blade made from forged steel or iron. Its wide cutting edge was designed for striking and was traditionally used as a weapon by Cordilleran warriors.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-spike" data-position="0.35 0.9 0" data-normal="0 1 0" aria-label="Rear Spike detail">
+        <span class="hotspot-number">2</span><span class="hotspot-label"><strong>Rear Spike</strong> — The distinctive rear spike gives the Sinawit its recognizable shape and provides an additional pointed striking feature during combat.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-handle" data-position="0.1 -0.15 0" data-normal="0 1 0" aria-label="Wooden Handle detail">
+        <span class="hotspot-number">3</span><span class="hotspot-label"><strong>Wooden Handle</strong> — The handle is traditionally crafted from hardwood, providing a firm grip and control when swinging the axe. Metal bands may reinforce the connection between the blade and handle, improving its durability.</span>
+      </button>
+      <button class="ar-button" slot="ar-button">View in AR</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="../viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aliwa | PASCCAH</title>
+  <link rel="stylesheet" href="../viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="../Archives/apayao-archive.html" class="back-link">← Back to Apayao Archive</a>
+    <h1>Aliwa</h1>
+    <div class="meta-item">Traditional Curved-Blade Tool</div>
+    <div class="content-section">
+
+      <section class="viewer-instructions">
+        <h2>Interactive Viewer Controls</h2>
+          <ul>
+            <li><strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).</li>
+            <li><strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.</li>
+            <li><strong>Move Camera:</strong> Drag with your mouse (<i>Right Click</i>) or two fingers.</li>
+            <li><strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.</li>
+            <li><strong>Hotspots:</strong> Select the numbered points on the artifact.</li>
+          </ul>
+      </section>
+
+      <br>
+      <p>
+        <strong>Everyday and Combat Purpose:</strong> Used for clearing thick vegetation, chopping firewood, and harvesting crops. Historically, it also served as a close-combat weapon, with its curved blade designed for effective swinging and striking.
+      </p>
+      <p>
+        <strong>Materials Used:</strong> Features a forged steel blade with a broad, curved edge and a distinctive backward-pointing spur. Its handle is made from hardwood or carabao horn and reinforced with woven rattan (uway) for a secure grip.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>References</strong>:
+      </p>
+      <p>
+        Aliwa (a). (n.d.). Bahay Ugnayan Research Center. https://www.bahayugnayan.org/community-group/isneg/aliwa-(a)
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+
+    <model-viewer
+      id="artifact-viewer"
+      src="../3D%20ASSETS/apayao-aliwa.glb"
+      alt="3D model of Aliwa"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="model-hotspot" slot="hotspot-blade" data-position="-0.2 0.75 0" data-normal="0 1 0" aria-label="Curved Steel Blade detail">
+        <span class="hotspot-number">1</span><span class="hotspot-label"><strong>Curved Steel Blade</strong> — The Aliwa features a forged steel blade with a broad, curved cutting edge designed for clearing vegetation, chopping firewood, and harvesting crops.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-spur" data-position="0.25 0.85 0" data-normal="0 1 0" aria-label="Backward-Pointing Spur detail">
+        <span class="hotspot-number">2</span><span class="hotspot-label"><strong>Backward-Pointing Spur</strong> — The distinctive backward-pointing spur gives the Aliwa its recognizable shape and contributes to its functionality as a traditional cutting tool and close-combat weapon.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-handle" data-position="0 -0.15 0" data-normal="0 1 0" aria-label="Wooden Handle detail">
+        <span class="hotspot-number">3</span><span class="hotspot-label"><strong>Wooden Handle</strong> — The handle is traditionally made from hardwood or carabao horn, sometimes reinforced with woven rattan (uway) to provide a secure and comfortable grip during use.</span>
+      </button>
+      <button class="ar-button" slot="ar-button">View in AR</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="../viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kayabang | PASCCAH</title>
+  <link rel="stylesheet" href="../viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="../Archives/benguet-archive.html" class="back-link">← Back to Benguet Archive</a>
+    <h1>Kayabang</h1>
+    <div class="meta-item">Traditional Basket</div>
+    <div class="content-section">
+
+      <section class="viewer-instructions">
+        <h2>Interactive Viewer Controls</h2>
+          <ul>
+            <li><strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).</li>
+            <li><strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.</li>
+            <li><strong>Move Camera:</strong> Drag with your mouse (<i>Right Click</i>) or two fingers.</li>
+            <li><strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.</li>
+            <li><strong>Hotspots:</strong> Select the numbered points on the artifact.</li>
+          </ul>
+      </section>
+
+      <br>
+      <p>
+        <strong>Agricultural and Ritual Purpose:</strong> Placed inside rice granaries (alang) and homes to protect stored rice, encourage good harvests, and guard against pests or theft. It is also used in sacred rituals led by traditional priests (mumbaki).
+      </p>
+      <p>
+        <strong>Materials Used:</strong>: Carved mainly from hardwoods such as narra, ipil, or tree fern (gulgul). The figures are shaped into simple human forms and may darken over time from smoke and ritual offerings.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>References</strong>:
+      </p>
+      <p>
+        National Heritage Month – Benguet Provincial Library. (2024, May 9). https://bplibrary.benguetprovince.com/national-heritage-month-2/
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+
+    <model-viewer
+      id="artifact-viewer"
+      src="../3D%20ASSETS/benguet-kayabang.glb"
+      alt="3D model of Kayabang"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="model-hotspot" slot="hotspot-top" data-position="0.55 0.85 0.7" data-normal="0 1 0" aria-label="Wide Opening (Upper Rim) detail">
+        <span class="hotspot-number">1</span><span class="hotspot-label"><strong>Wide Opening (Upper Rim)</strong> — The wide opening allows farmers to easily place and remove harvested crops such as vegetables, root crops, and rice.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-body" data-position="-0.35 0.005 0.35" data-normal="0 0 1" aria-label="Woven Body detail">
+        <span class="hotspot-number">2</span><span class="hotspot-label"><strong>Woven Body</strong> — The tightly woven body provides strength and support for carrying agricultural produce. Its construction helps keep harvested crops securely inside the basket.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-base" data-position="0 -0.9 0.35" data-normal="0 1 0" aria-label="Reinforced Base detail">
+        <span class="hotspot-number">3</span><span class="hotspot-label"><strong>Reinforced Base</strong> — The narrower, reinforced base supports the basket's structure and helps it maintain its shape when carrying agricultural products.</span>
+      </button>
+      <button class="ar-button" slot="ar-button">View in AR</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="../viewer.js"></script>
+</body>
+</html>
