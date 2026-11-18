@@ -67,6 +67,7 @@ body {
 .content-section {
   font-size: 0.95rem;
   line-height: 1.6;
+  padding-bottom: 1.5rem;
   overflow-wrap: anywhere;
 }
 
