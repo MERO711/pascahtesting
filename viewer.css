@@ -154,7 +154,6 @@ body {
   cursor: pointer;
   font: inherit;
   text-align: left;
-  pointer-events: auto;
 }
 
 .hotspot-number {
@@ -163,7 +162,6 @@ body {
   height: 2rem;
   flex: 0 0 2rem;
   place-items: center;
-  pointer-events: auto;
 
   border: 2px solid #333333;
   border-radius: 50%;
