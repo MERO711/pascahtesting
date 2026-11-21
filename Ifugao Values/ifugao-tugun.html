@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tugun | PASCCAH</title>
+  <link rel="stylesheet" href="../viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="../Archives/ifugao-archive.html" class="back-link">← Back to Kalinga Archive</a>
+    <h1>Tugun</h1>
+    <div class="meta-item">Traditional Cordilleran Cultural Belief</div>
+    <div class="content-section">
+
+      <section class="viewer-instructions">
+        <h2>Interactive Viewer Controls</h2>
+          <ul>
+            <li><strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).</li>
+            <li><strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.</li>
+            <li><strong>Move Camera:</strong> Drag with your mouse (<i>Right Click</i>) or two fingers.</li>
+            <li><strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.</li>
+            <li><strong>Hotspots:</strong> Select the numbered points on the artifact.</li>
+          </ul>
+      </section>
+
+      <br>
+      <p>
+        <strong>Cultural and Moral Significance:</strong> Reflects the importance of respecting ancestral teachings and fulfilling responsibilities inherited from previous generations. It encourages individuals to uphold traditional values, follow moral guidance, and maintain cultural practices within their communities.
+      </p>
+      <p>
+        <strong>Representation and Meaning:</strong> Represents the passing down of wisdom, knowledge, and moral duties from elders to younger generations. It emphasizes respect for ancestral guidance, the responsibility to practice inherited teachings, and the importance of preserving these values for future generations.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>References</strong>:
+      </p>
+      <p>
+        Bistol, J. M. (2023). The Ifugao ethnocultural thanksgiving practices towards fostering cultural identity. Global Scientific Journals, 11(12). 
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+
+    <model-viewer
+      id="artifact-viewer"
+      src="../3D%20ASSETS%20VALUES/ifugao-tugun.glb"
+      alt="3D model of Tugun"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="model-hotspot" slot="hotspot-chest" data-position="0.1 0.9 -1.2" data-normal="0 1 0" aria-label="The Elder – Ancestral Wisdom detail">
+        <span class="hotspot-number">1</span><span class="hotspot-label"><strong>The Elder – Ancestral Wisdom</strong> — Represents the elders who pass down traditional knowledge, moral guidance, and cultural responsibilities.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-thief" data-position="0.1 0.8 0" data-normal="0 1 0" aria-label="The Young Person – Moral Responsibility: detail">
+        <span class="hotspot-number">2</span><span class="hotspot-label"><strong>The Young Person – Moral Responsibility:</strong> — Represents the younger generation's duty to understand, respect, and follow the teachings of their ancestors.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-unaware" data-position="-0.58 1.02 -0.7" data-normal="0 1 0" aria-label="The Elder's Raised Hand – Guidance and Instruction detail">
+        <span class="hotspot-number">3</span><span class="hotspot-label"><strong>The Elder's Raised Hand – Guidance and Instruction</strong> — Symbolizes the act of giving advice, sharing ancestral wisdom, and guiding younger generations toward fulfilling their moral and cultural responsibilities.</span>
+      </button>
+      <button class="ar-button" slot="ar-button">View in AR</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="../viewer.js"></script>
+</body>
+</html>
