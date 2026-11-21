@@ -48,7 +48,7 @@
 
     <model-viewer
       id="artifact-viewer"
-      src="../3D%20ASSETS/kalinga-ceramic_jars.glb"
+      src="../3D%20ASSETS/kalinga-immoso.glb"
       alt="3D model of Immoso"
       camera-controls
       touch-action="pan-y"
@@ -60,13 +60,13 @@
       exposure="1"
       interaction-prompt="auto"
       loading="eager">
-      <button class="model-hotspot" slot="hotspot-opening" data-position="0.05 0.9 0.4" data-normal="0 1 0" aria-label="Wide Opening and Rim detail">
+      <button class="model-hotspot" slot="hotspot-opening" data-position="0.05 0.24 0.12" data-normal="0 1 0" aria-label="Wide Opening and Rim detail">
         <span class="hotspot-number">1</span><span class="hotspot-label"><strong>Wide Opening and Rim</strong> — The Immoso features a wide circular opening with a thickened rim, allowing liquids to be easily poured in and out of the vessel.</span>
       </button>
-      <button class="model-hotspot" slot="hotspot-body" data-position="0.25 -0.045 0.58" data-normal="0 0 1" aria-label="Clay Body detail">
+      <button class="model-hotspot" slot="hotspot-body" data-position="0.15 0.045 0.2" data-normal="0 0 1" aria-label="Clay Body detail">
         <span class="hotspot-number">2</span><span class="hotspot-label"><strong>Clay Body</strong> — The vessel is traditionally handcrafted from local earthenware clay using techniques such as coiling and hand-modeling. Its rounded body provides space for storing water and traditional beverages.</span>
       </button>
-      <button class="model-hotspot" slot="hotspot-bands" data-position="-0.58 0.4 0" data-normal="0 1 0" aria-label="Decorative Bands and Side Attachments detail">
+      <button class="model-hotspot" slot="hotspot-bands" data-position="-0.21 0.1 0" data-normal="0 1 0" aria-label="Decorative Bands and Side Attachments detail">
         <span class="hotspot-number">3</span><span class="hotspot-label"><strong>Decorative Bands and Side Attachments</strong> — The raised bands add texture to the vessel's surface, while the side attachments may help secure cords for handling or transporting the jar./span>
       </button>
       <button class="ar-button" slot="ar-button">View in AR</button>
@@ -75,6 +75,13 @@
     <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
   </main>
 
+
+  <!-- To match EXT_meshopt_compression used for 3D model instead of Draco Compression-->
+  <script>
+    self.ModelViewerElement = self.ModelViewerElement || {};
+    self.ModelViewerElement.meshoptDecoderLocation =
+      'https://cdn.jsdelivr.net/npm/meshoptimizer@0.22.0/meshopt_decoder.js';
+  </script>
 
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
   <script type="module" src="../viewer.js"></script>
