@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innaluyon | PASCCAH</title>
+  <link rel="stylesheet" href="../viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="../Archives/abra-archive.html" class="back-link">← Back to Abra Archive</a>
+    <h1>Innaluyon</h1>
+    <div class="meta-item">Traditional Practice of Mutual Help and Cooperation</div>
+    <div class="content-section">
+
+      <section class="viewer-instructions">
+        <h2>Interactive Viewer Controls</h2>
+          <ul>
+            <li><strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).</li>
+            <li><strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.</li>
+            <li><strong>Move Camera:</strong> Drag with your mouse (<i>Right Click</i>) or two fingers.</li>
+            <li><strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.</li>
+            <li><strong>Hotspots:</strong> Select the numbered points on the artifact.</li>
+          </ul>
+      </section>
+
+      <br>
+      <p>
+        <strong>Cultural and Moral Significance:</strong> Reflects the importance of unity, generosity, and cooperation within the community. It encourages individuals to assist one another, share responsibilities, and strengthen relationships through mutual support and reciprocal help.
+      </p>
+      <p>
+        <strong>Representation and Meaning:</strong> Represents the tradition of working together to accomplish shared goals and overcome challenges. It emphasizes community solidarity, collective responsibility, and the understanding that helping others strengthens relationships and encourages mutual assistance in the future.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>References</strong>:
+      </p>
+      <p>
+        Llaneza, L. B. (n.d.). Preservation of Tinguian cultures in the province of Abra. 
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+
+    <model-viewer
+      id="artifact-viewer"
+      src="../3D%20ASSETS%20VALUES/abra-innaluyon.glb"
+      alt="3D model of Innaluyon"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="model-hotspot" slot="hotspot-first" data-position="-0.1 0.82 0.4" data-normal="0 1 0" aria-label="The First Villager – Cooperation and Shared Effort detail">
+        <span class="hotspot-number">1</span><span class="hotspot-label"><strong>The First Villager – Cooperation and Shared Effort</strong> — Represents the willingness of community members to help one another accomplish difficult tasks through teamwork and shared responsibilities.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-second" data-position="-0.3 0.45 -1.7" data-normal="0 1 0" aria-label="The Second Villager – Mutual Assistance detail">
+        <span class="hotspot-number">2</span><span class="hotspot-label"><strong>The Second Villager – Mutual Assistance</strong> — Represents the importance of supporting others, working together, and strengthening relationships through cooperation and mutual help.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-wood" data-position="-0.22 0.1 -0.8" data-normal="0 1 0" aria-label="The Bundle of Firewood – Collective Responsibility detail">
+        <span class="hotspot-number">3</span><span class="hotspot-label"><strong>The Bundle of Firewood – Collective Responsibility</strong> — Represents the difficult tasks that become easier when community members combine their efforts, reflecting the spirit of unity and cooperation within the community.</span>
+      </button>
+      <button class="ar-button" slot="ar-button">View in AR</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="../viewer.js"></script>
+</body>
+</html>

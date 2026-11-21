@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Palnah | PASCCAH</title>
-  <link rel="stylesheet" href="../viewer.css" />
+  <link rel="stylesheet" href="../viewer.css"/>
 </head>
 <body>
   <aside class="info-sidebar">
@@ -60,13 +60,13 @@
       exposure="1"
       interaction-prompt="auto"
       loading="eager">
-      <button class="model-hotspot" slot="hotspot-chest" data-position="0 0.82 0" data-normal="0 1 0" aria-label="The Elder – Peace and Mediation detail">
+      <button class="model-hotspot" slot="hotspot-elder" data-position="0 0.82 0" data-normal="0 1 0" aria-label="The Elder – Peace and Mediation detail">
         <span class="hotspot-number">1</span><span class="hotspot-label"><strong>The Elder – Peace and Mediation</strong> — Represents the respected elders who guide discussions, settle disputes, and encourage fair agreements between communities.</span>
       </button>
-      <button class="model-hotspot" slot="hotspot-thief" data-position="-0.7 0.45 0.5" data-normal="0 1 0" aria-label="The First Community Member – Willingness to Reconcile detail">
-        <span class="hotspot-number">2</span><span class="hotspot-label"><strong>The First Community Member – Willingness to Reconcile</strong> — Willingness to Reconcile: Represents the importance of cooperation, understanding, and setting aside disagreements to restore peaceful relationships..</span>
+      <button class="model-hotspot" slot="hotspot-first" data-position="-0.8 0.45 0.5" data-normal="0 1 0" aria-label="The First Community Member – Willingness to Reconcile detail">
+        <span class="hotspot-number">2</span><span class="hotspot-label"><strong>The First Community Member – Willingness to Reconcile</strong> — Willingness to Reconcile: Represents the importance of cooperation, understanding, and setting aside disagreements to restore peaceful relationships.</span>
       </button>
-      <button class="model-hotspot" slot="hotspot-unaware" data-position="0.75 0.42 0.7" data-normal="0 1 0" aria-label="The Second Community Member – Peace and Unity detail">
+      <button class="model-hotspot" slot="hotspot-second" data-position="0.75 0.42 0.7" data-normal="0 1 0" aria-label="The Second Community Member – Peace and Unity detail">
         <span class="hotspot-number">3</span><span class="hotspot-label"><strong>The Second Community Member – Peace and Unity</strong> — Represents the acceptance of mutual agreements, forgiveness, and the restoration of harmony between communities.</span>
       </button>
       <button class="ar-button" slot="ar-button">View in AR</button>
@@ -75,6 +75,12 @@
     <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
   </main>
 
+  <!-- To match EXT_meshopt_compression used for 3D model instead of Draco Compression-->
+  <script>
+    self.ModelViewerElement = self.ModelViewerElement || {};
+    self.ModelViewerElement.meshoptDecoderLocation =
+      'https://cdn.jsdelivr.net/npm/meshoptimizer@0.22.0/meshopt_decoder.js';
+  </script>
 
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
   <script type="module" src="../viewer.js"></script>
