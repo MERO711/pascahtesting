@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palnah | PASCCAH</title>
+  <link rel="stylesheet" href="../viewer.css" />
+</head>
+<body>
+  <aside class="info-sidebar">
+    <a href="../Archives/apayao-archive.html" class="back-link">← Back to Apayao Archive</a>
+    <h1>Palnah</h1>
+    <div class="meta-item">Traditional Intertribal Peace Pact and Conflict Resolution System</div>
+    <div class="content-section">
+
+      <section class="viewer-instructions">
+        <h2>Interactive Viewer Controls</h2>
+          <ul>
+            <li><strong>View in AR:</strong> Select “View in AR” (<i>Available only on a mobile device</i>).</li>
+            <li><strong>Rotate:</strong> Drag with your mouse (<i>Left Click</i>) or finger.</li>
+            <li><strong>Move Camera:</strong> Drag with your mouse (<i>Right Click</i>) or two fingers.</li>
+            <li><strong>Zoom:</strong> Scroll, pinch, or use the zoom gesture.</li>
+            <li><strong>Hotspots:</strong> Select the numbered points on the artifact.</li>
+          </ul>
+      </section>
+
+      <br>
+      <p>
+        <strong>Cultural and Moral Significance:</strong> Reflects the importance of maintaining peace, fairness, and mutual respect among communities. It emphasizes the role of elders in resolving disputes, encouraging understanding, and promoting cooperation to prevent further conflicts.
+      </p>
+      <p>
+        <strong>Representation and Meaning:</strong> Represents the Isnag tradition of settling disagreements through peaceful discussions, mediation, and mutual agreements. It emphasizes reconciliation, respect for traditional laws, and the importance of restoring harmony and strengthening relationships between communities.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>References</strong>:
+      </p>
+      <p>
+        Simsim, M. B. (n.d.). CHAPTER-4-Apayao (1). Scribd. https://www.scribd.com/document/725808876/CHAPTER-4-Apayao-1
+      </p>
+    </div>
+  </aside>
+
+  <main class="viewer-container" id="viewer-container">
+
+    <model-viewer
+      id="artifact-viewer"
+      src="../3D%20ASSETS%20VALUES/apayao-palnah.glb"
+      alt="3D model of Palnah"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+      <button class="model-hotspot" slot="hotspot-chest" data-position="0 0.82 0" data-normal="0 1 0" aria-label="The Elder – Peace and Mediation detail">
+        <span class="hotspot-number">1</span><span class="hotspot-label"><strong>The Elder – Peace and Mediation</strong> — Represents the respected elders who guide discussions, settle disputes, and encourage fair agreements between communities.</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-thief" data-position="-0.7 0.45 0.5" data-normal="0 1 0" aria-label="The First Community Member – Willingness to Reconcile detail">
+        <span class="hotspot-number">2</span><span class="hotspot-label"><strong>The First Community Member – Willingness to Reconcile</strong> — Willingness to Reconcile: Represents the importance of cooperation, understanding, and setting aside disagreements to restore peaceful relationships..</span>
+      </button>
+      <button class="model-hotspot" slot="hotspot-unaware" data-position="0.75 0.42 0.7" data-normal="0 1 0" aria-label="The Second Community Member – Peace and Unity detail">
+        <span class="hotspot-number">3</span><span class="hotspot-label"><strong>The Second Community Member – Peace and Unity</strong> — Represents the acceptance of mutual agreements, forgiveness, and the restoration of harmony between communities.</span>
+      </button>
+      <button class="ar-button" slot="ar-button">View in AR</button>
+      <div class="model-loading" slot="progress-bar">Loading 3D model…</div>
+    </model-viewer>
+    <button class="fullscreen-btn" id="fullscreen-btn" type="button">Toggle Fullscreen</button>
+  </main>
+
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script type="module" src="../viewer.js"></script>
+</body>
+</html>
